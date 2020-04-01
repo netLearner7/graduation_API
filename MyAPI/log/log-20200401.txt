@@ -1,0 +1,21 @@
+2020-04-01 10:51:41.075 +08:00 [DBG] 程序启动
+2020-04-01 10:51:45.036 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-04-01 10:51:45.694 +08:00 [INF] Now listening on: http://localhost:6000
+2020-04-01 10:51:45.696 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-04-01 10:51:45.697 +08:00 [INF] Hosting environment: Development
+2020-04-01 10:51:45.698 +08:00 [INF] Content root path: E:\SandTablePriject\.net core3.1\API\MyAPI
+2020-04-01 10:51:47.285 +08:00 [INF] Application is shutting down...
+2020-04-01 10:52:21.586 +08:00 [DBG] 程序启动
+2020-04-01 10:52:23.256 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-04-01 10:52:23.726 +08:00 [INF] Now listening on: http://[::]:5000
+2020-04-01 10:52:23.728 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-04-01 10:52:23.729 +08:00 [INF] Hosting environment: Development
+2020-04-01 10:52:23.730 +08:00 [INF] Content root path: E:\SandTablePriject\.net core3.1\API\MyAPI
+2020-04-01 10:52:35.248 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting/ceshi  
+2020-04-01 10:52:35.521 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.ceshi (API)'
+2020-04-01 10:52:35.564 +08:00 [INF] Route matched with {action = "ceshi", controller = "Meeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ceshi() on controller MyAPI.Controllers.MeetingController (API).
+2020-04-01 10:52:36.358 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`3[[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2020-04-01 10:52:36.572 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.ceshi (API) in 996.0232ms
+2020-04-01 10:52:36.582 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.ceshi (API)'
+2020-04-01 10:52:36.588 +08:00 [INF] Request finished in 1343.4379ms 200 application/json; charset=utf-8
+2020-04-01 10:52:41.350 +08:00 [INF] Application is shutting down...
