@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29609.76
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "MyAPI\API.csproj", "{B17726B9-4DD6-48F2-B837-4BB9B2A69052}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{5FCCE869-B5A0-42EE-AC4C-2E7DAB3BCCFF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Core\Core.csproj", "{209FBC95-8684-4712-838A-DC1A383DFB5E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B17726B9-4DD6-48F2-B837-4BB9B2A69052}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B17726B9-4DD6-48F2-B837-4BB9B2A69052}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B17726B9-4DD6-48F2-B837-4BB9B2A69052}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B17726B9-4DD6-48F2-B837-4BB9B2A69052}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FCCE869-B5A0-42EE-AC4C-2E7DAB3BCCFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FCCE869-B5A0-42EE-AC4C-2E7DAB3BCCFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FCCE869-B5A0-42EE-AC4C-2E7DAB3BCCFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FCCE869-B5A0-42EE-AC4C-2E7DAB3BCCFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{209FBC95-8684-4712-838A-DC1A383DFB5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{209FBC95-8684-4712-838A-DC1A383DFB5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{209FBC95-8684-4712-838A-DC1A383DFB5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{209FBC95-8684-4712-838A-DC1A383DFB5E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9FC46C71-19EB-4CB0-93A5-663C228F1C29}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,25 @@
+2020-02-10 13:34:41.682 +08:00 [DBG] 程序启动
+2020-02-10 13:34:42.550 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-10 13:34:42.850 +08:00 [INF] Now listening on: http://localhost:5000
+2020-02-10 13:34:42.852 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-02-10 13:34:42.852 +08:00 [INF] Hosting environment: Development
+2020-02-10 13:34:42.854 +08:00 [INF] Content root path: E:\SandTablePriject\.net core3.1\MyAPI\MyAPI
+2020-02-10 18:26:01.482 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/  
+2020-02-10 18:26:01.618 +08:00 [INF] Request finished in 142.4183ms 301 
+2020-02-10 18:26:01.633 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/index.html  
+2020-02-10 18:26:01.839 +08:00 [INF] Request finished in 205.7098ms 200 text/html;charset=utf-8
+2020-02-10 18:26:01.883 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger-ui.css  
+2020-02-10 18:26:01.885 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger-ui-bundle.js  
+2020-02-10 18:26:01.887 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger-ui-standalone-preset.js  
+2020-02-10 18:26:01.925 +08:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2020-02-10 18:26:01.925 +08:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2020-02-10 18:26:01.931 +08:00 [INF] Request finished in 43.1104ms 200 application/javascript
+2020-02-10 18:26:01.931 +08:00 [INF] Request finished in 47.333ms 200 text/css
+2020-02-10 18:26:01.933 +08:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2020-02-10 18:26:01.934 +08:00 [INF] Request finished in 49.3268ms 200 application/javascript
+2020-02-10 18:26:02.238 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json  
+2020-02-10 18:26:02.260 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/favicon-32x32.png  
+2020-02-10 18:26:02.275 +08:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2020-02-10 18:26:02.277 +08:00 [INF] Request finished in 17.5956ms 200 image/png
+2020-02-10 18:26:02.504 +08:00 [INF] Request finished in 266.6288ms 200 application/json;charset=utf-8
+2020-02-10 18:29:08.160 +08:00 [INF] Application is shutting down...

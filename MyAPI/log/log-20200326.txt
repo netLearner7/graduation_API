@@ -1,0 +1,912 @@
+2020-03-26 17:58:29.842 +08:00 [DBG] 程序启动
+2020-03-26 17:58:30.658 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-03-26 17:58:31.003 +08:00 [FTL] Unable to start Kestrel.
+System.Net.Sockets.SocketException (10049): 在其上下文中，该请求的地址无效。
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.<>c__DisplayClass21_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.ListenOptions.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(IServerAddressesFeature addresses, KestrelServerOptions serverOptions, ILogger logger, Func`2 createBinding)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+2020-03-26 18:06:53.442 +08:00 [DBG] 程序启动
+2020-03-26 18:06:53.917 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-03-26 18:06:54.185 +08:00 [INF] Now listening on: http://192.168.1.2:5000
+2020-03-26 18:06:54.186 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-03-26 18:06:54.187 +08:00 [INF] Hosting environment: Development
+2020-03-26 18:06:54.188 +08:00 [INF] Content root path: E:\SandTablePriject\.net core3.1\MyAPI\MyAPI
+2020-03-26 18:19:57.656 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-03-26 18:20:18.980 +08:00 [ERR] Exception occurred while processing message.
+System.InvalidOperationException: IDX20803: Unable to obtain configuration from: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+ ---> System.IO.IOException: IDX20804: Unable to retrieve document from: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+ ---> System.Net.Http.HttpRequestException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ---> System.Net.Sockets.SocketException (10060): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Microsoft.IdentityModel.Protocols.HttpDocumentRetriever.GetDocumentAsync(String address, CancellationToken cancel)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.Protocols.HttpDocumentRetriever.GetDocumentAsync(String address, CancellationToken cancel)
+   at Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfigurationRetriever.GetAsync(String address, IDocumentRetriever retriever, CancellationToken cancel)
+   at Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationAsync(CancellationToken cancel)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationAsync(CancellationToken cancel)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2020-03-26 18:20:19.102 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: IDX20803: Unable to obtain configuration from: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+ ---> System.IO.IOException: IDX20804: Unable to retrieve document from: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+ ---> System.Net.Http.HttpRequestException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+ ---> System.Net.Sockets.SocketException (10060): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Microsoft.IdentityModel.Protocols.HttpDocumentRetriever.GetDocumentAsync(String address, CancellationToken cancel)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.Protocols.HttpDocumentRetriever.GetDocumentAsync(String address, CancellationToken cancel)
+   at Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfigurationRetriever.GetAsync(String address, IDocumentRetriever retriever, CancellationToken cancel)
+   at Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationAsync(CancellationToken cancel)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationAsync(CancellationToken cancel)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.AuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-03-26 18:20:19.142 +08:00 [INF] Request finished in 21490.7019ms 500 text/plain
+2020-03-26 18:21:39.580 +08:00 [INF] Application is shutting down...
+2020-03-26 18:23:06.022 +08:00 [DBG] 程序启动
+2020-03-26 18:23:11.682 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-03-26 18:23:12.427 +08:00 [INF] Now listening on: http://192.168.1.2:5000
+2020-03-26 18:23:12.428 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-03-26 18:23:12.429 +08:00 [INF] Hosting environment: Development
+2020-03-26 18:23:12.430 +08:00 [INF] Content root path: E:\SandTablePriject\.net core3.1\MyAPI\MyAPI
+2020-03-26 18:23:17.799 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-03-26 18:23:18.886 +08:00 [INF] Successfully validated the token.
+2020-03-26 18:23:18.896 +08:00 [INF] Authorization was successful.
+2020-03-26 18:23:18.897 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-03-26 18:23:18.973 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-03-26 18:23:19.720 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-查询2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483的会议列表
+2020-03-26 18:23:20.732 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-03-26 18:23:21.711 +08:00 [INF] Executed DbCommand (143ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[CreaterId], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingState]
+FROM [Meeting] AS [m]
+WHERE [m].[CreaterId] = @__userId_0
+2020-03-26 18:23:21.873 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-对2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483会议列表进行排序
+2020-03-26 18:23:21.877 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483的会议列表转换为dto
+2020-03-26 18:23:21.945 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-返回2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483的会议列表,action结束
+2020-03-26 18:23:21.958 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-03-26 18:23:22.023 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 3038.3334ms
+2020-03-26 18:23:22.043 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-03-26 18:23:22.056 +08:00 [INF] Request finished in 4267.083ms 200 application/json; charset=utf-8
+2020-03-26 18:23:28.201 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/api/Meeting/45  
+2020-03-26 18:23:28.208 +08:00 [INF] Successfully validated the token.
+2020-03-26 18:23:28.210 +08:00 [INF] Authorization was successful.
+2020-03-26 18:23:28.212 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-03-26 18:23:28.219 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-03-26 18:23:28.234 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-开始查询id为45的会议
+2020-03-26 18:23:28.277 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-03-26 18:23:28.320 +08:00 [INF] Executed DbCommand (27ms) [Parameters=[@__meetingId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[Id], [m].[Address], [m].[Content], [m].[CreaterId], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingState]
+FROM [Meeting] AS [m]
+WHERE [m].[Id] = @__meetingId_0
+2020-03-26 18:23:28.324 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-查询id为45的创建者信息
+2020-03-26 18:23:28.370 +08:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__userId_0
+2020-03-26 18:23:28.423 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-转换查询到的信息
+2020-03-26 18:23:28.436 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-返回数据,action结束
+2020-03-26 18:23:28.438 +08:00 [INF] Executing ObjectResult, writing value of type 'Infrastructure.Dto.MeetingOutputDto'.
+2020-03-26 18:23:28.440 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 218.0633ms
+2020-03-26 18:23:28.447 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-03-26 18:23:28.449 +08:00 [INF] Request finished in 248.2947ms 200 application/json; charset=utf-8
+2020-03-26 18:23:33.859 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/api/Meeting/analysisInviteCode?inviteCode=S7tWZgCnUqgXGVZcQPihUHsq%252BpX7jbsstHWupcjeBGE%253D  
+2020-03-26 18:23:33.870 +08:00 [INF] Successfully validated the token.
+2020-03-26 18:23:33.873 +08:00 [INF] Authorization was successful.
+2020-03-26 18:23:33.874 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.AnalysisInviteCode (MyAPI)'
+2020-03-26 18:23:33.885 +08:00 [INF] Route matched with {action = "AnalysisInviteCode", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AnalysisInviteCode(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-03-26 18:23:33.935 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-解析成功后,获取会议信息
+2020-03-26 18:23:33.949 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-03-26 18:23:33.968 +08:00 [INF] Executed DbCommand (7ms) [Parameters=[@__meetingId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[Id], [m].[Address], [m].[Content], [m].[CreaterId], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingState]
+FROM [Meeting] AS [m]
+WHERE [m].[Id] = @__meetingId_0
+2020-03-26 18:23:33.973 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-返回数据,action结束
+2020-03-26 18:23:33.976 +08:00 [INF] Executing ObjectResult, writing value of type 'Infrastructure.Dto.MeetingOutputDto'.
+2020-03-26 18:23:33.979 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.AnalysisInviteCode (MyAPI) in 89.8349ms
+2020-03-26 18:23:33.987 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.AnalysisInviteCode (MyAPI)'
+2020-03-26 18:23:34.002 +08:00 [INF] Request finished in 143.3174ms 200 application/json; charset=utf-8
+2020-03-26 18:23:43.599 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-03-26 18:23:43.605 +08:00 [INF] Successfully validated the token.
+2020-03-26 18:23:43.607 +08:00 [INF] Authorization was successful.
+2020-03-26 18:23:43.609 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-03-26 18:23:43.612 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-03-26 18:23:43.617 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-查询2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483的会议列表
+2020-03-26 18:23:43.619 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-03-26 18:23:43.636 +08:00 [INF] Executed DbCommand (12ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[CreaterId], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingState]
+FROM [Meeting] AS [m]
+WHERE [m].[CreaterId] = @__userId_0
+2020-03-26 18:23:43.648 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-对2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483会议列表进行排序
+2020-03-26 18:23:43.650 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483的会议列表转换为dto
+2020-03-26 18:23:43.652 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-返回2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483的会议列表,action结束
+2020-03-26 18:23:43.654 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-03-26 18:23:43.664 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 48.2677ms
+2020-03-26 18:23:43.673 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-03-26 18:23:43.679 +08:00 [INF] Request finished in 81.0899ms 200 application/json; charset=utf-8
+2020-03-26 18:23:47.904 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/api/Meeting/51  
+2020-03-26 18:23:47.942 +08:00 [INF] Successfully validated the token.
+2020-03-26 18:23:47.950 +08:00 [INF] Authorization was successful.
+2020-03-26 18:23:47.952 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-03-26 18:23:47.959 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-03-26 18:23:47.967 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-开始查询id为51的会议
+2020-03-26 18:23:47.970 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-03-26 18:23:47.982 +08:00 [INF] Executed DbCommand (7ms) [Parameters=[@__meetingId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[Id], [m].[Address], [m].[Content], [m].[CreaterId], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingState]
+FROM [Meeting] AS [m]
+WHERE [m].[Id] = @__meetingId_0
+2020-03-26 18:23:47.988 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-查询id为51的创建者信息
+2020-03-26 18:23:48.013 +08:00 [INF] Executed DbCommand (23ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__userId_0
+2020-03-26 18:23:48.019 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-转换查询到的信息
+2020-03-26 18:23:48.020 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-返回数据,action结束
+2020-03-26 18:23:48.022 +08:00 [INF] Executing ObjectResult, writing value of type 'Infrastructure.Dto.MeetingOutputDto'.
+2020-03-26 18:23:48.029 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 64.6983ms
+2020-03-26 18:23:48.032 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-03-26 18:23:48.038 +08:00 [INF] Request finished in 133.624ms 200 application/json; charset=utf-8
+2020-03-26 18:23:52.347 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/api/Meeting/analysisInviteCode?inviteCode=XPYc%252BU9%252F0qgj7CnIJkRD5EYeCLdNK52HRMQDnuMn49vO8Bpm0UNcSXbk1Tgu2P5E  
+2020-03-26 18:23:52.352 +08:00 [INF] Successfully validated the token.
+2020-03-26 18:23:52.354 +08:00 [INF] Authorization was successful.
+2020-03-26 18:23:52.355 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.AnalysisInviteCode (MyAPI)'
+2020-03-26 18:23:52.357 +08:00 [INF] Route matched with {action = "AnalysisInviteCode", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AnalysisInviteCode(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-03-26 18:23:52.362 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-解析成功后,获取会议信息
+2020-03-26 18:23:52.364 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-03-26 18:23:52.371 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[@__meetingId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[Id], [m].[Address], [m].[Content], [m].[CreaterId], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingState]
+FROM [Meeting] AS [m]
+WHERE [m].[Id] = @__meetingId_0
+2020-03-26 18:23:52.377 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-返回数据,action结束
+2020-03-26 18:23:52.378 +08:00 [INF] Executing ObjectResult, writing value of type 'Infrastructure.Dto.MeetingOutputDto'.
+2020-03-26 18:23:52.381 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.AnalysisInviteCode (MyAPI) in 21.2474ms
+2020-03-26 18:23:52.384 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.AnalysisInviteCode (MyAPI)'
+2020-03-26 18:23:52.387 +08:00 [INF] Request finished in 39.4195ms 200 application/json; charset=utf-8
+2020-03-26 18:25:38.213 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-03-26 18:25:38.220 +08:00 [INF] Successfully validated the token.
+2020-03-26 18:25:38.223 +08:00 [INF] Authorization was successful.
+2020-03-26 18:25:38.224 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-03-26 18:25:38.227 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-03-26 18:25:38.235 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-查询2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483的会议列表
+2020-03-26 18:25:38.239 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-03-26 18:25:38.248 +08:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[CreaterId], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingState]
+FROM [Meeting] AS [m]
+WHERE [m].[CreaterId] = @__userId_0
+2020-03-26 18:25:38.256 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-对2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483会议列表进行排序
+2020-03-26 18:25:38.257 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483的会议列表转换为dto
+2020-03-26 18:25:38.259 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-返回2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483的会议列表,action结束
+2020-03-26 18:25:38.261 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-03-26 18:25:38.267 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 33.3147ms
+2020-03-26 18:25:38.289 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-03-26 18:25:38.293 +08:00 [INF] Request finished in 79.2712ms 200 application/json; charset=utf-8
+2020-03-26 18:30:31.832 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-03-26 18:30:31.840 +08:00 [INF] Successfully validated the token.
+2020-03-26 18:30:31.858 +08:00 [INF] Authorization was successful.
+2020-03-26 18:30:31.859 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-03-26 18:30:31.864 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-03-26 18:30:31.869 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-查询2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483的会议列表
+2020-03-26 18:30:31.872 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-03-26 18:30:31.922 +08:00 [INF] Executed DbCommand (9ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[CreaterId], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingState]
+FROM [Meeting] AS [m]
+WHERE [m].[CreaterId] = @__userId_0
+2020-03-26 18:30:31.930 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-对2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483会议列表进行排序
+2020-03-26 18:30:31.932 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483的会议列表转换为dto
+2020-03-26 18:30:31.934 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-返回2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483的会议列表,action结束
+2020-03-26 18:30:31.935 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-03-26 18:30:31.938 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 71.2185ms
+2020-03-26 18:30:31.939 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-03-26 18:30:31.947 +08:00 [INF] Request finished in 115.401ms 200 application/json; charset=utf-8
+2020-03-26 18:30:35.835 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-03-26 18:30:35.838 +08:00 [INF] Successfully validated the token.
+2020-03-26 18:30:35.839 +08:00 [INF] Authorization was successful.
+2020-03-26 18:30:35.840 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-03-26 18:30:35.841 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-03-26 18:30:35.846 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-查询2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483的会议列表
+2020-03-26 18:30:35.849 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-03-26 18:30:35.855 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[CreaterId], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingState]
+FROM [Meeting] AS [m]
+WHERE [m].[CreaterId] = @__userId_0
+2020-03-26 18:30:35.859 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-对2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483会议列表进行排序
+2020-03-26 18:30:35.860 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483的会议列表转换为dto
+2020-03-26 18:30:35.862 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-返回2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483的会议列表,action结束
+2020-03-26 18:30:35.864 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-03-26 18:30:35.866 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 22.8222ms
+2020-03-26 18:30:35.868 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-03-26 18:30:35.871 +08:00 [INF] Request finished in 36.1038ms 200 application/json; charset=utf-8
+2020-03-26 18:30:38.886 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-03-26 18:30:38.890 +08:00 [INF] Successfully validated the token.
+2020-03-26 18:30:38.892 +08:00 [INF] Authorization was successful.
+2020-03-26 18:30:38.893 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-03-26 18:30:38.895 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-03-26 18:30:38.900 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-查询2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483的会议列表
+2020-03-26 18:30:38.902 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-03-26 18:30:38.910 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[CreaterId], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingState]
+FROM [Meeting] AS [m]
+WHERE [m].[CreaterId] = @__userId_0
+2020-03-26 18:30:38.917 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-对2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483会议列表进行排序
+2020-03-26 18:30:38.918 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483的会议列表转换为dto
+2020-03-26 18:30:38.919 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-返回2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483的会议列表,action结束
+2020-03-26 18:30:38.920 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-03-26 18:30:38.923 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 24.2753ms
+2020-03-26 18:30:38.941 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-03-26 18:30:38.944 +08:00 [INF] Request finished in 58.193ms 200 application/json; charset=utf-8
+2020-03-26 18:30:41.791 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-03-26 18:30:41.798 +08:00 [INF] Successfully validated the token.
+2020-03-26 18:30:41.801 +08:00 [INF] Authorization was successful.
+2020-03-26 18:30:41.802 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-03-26 18:30:41.803 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-03-26 18:30:41.809 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-查询2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483的会议列表
+2020-03-26 18:30:41.814 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-03-26 18:30:41.825 +08:00 [INF] Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[CreaterId], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingState]
+FROM [Meeting] AS [m]
+WHERE [m].[CreaterId] = @__userId_0
+2020-03-26 18:30:41.833 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-对2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483会议列表进行排序
+2020-03-26 18:30:41.834 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483的会议列表转换为dto
+2020-03-26 18:30:41.836 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-返回2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483的会议列表,action结束
+2020-03-26 18:30:41.837 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-03-26 18:30:41.840 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 33.3738ms
+2020-03-26 18:30:41.844 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-03-26 18:30:41.857 +08:00 [INF] Request finished in 66.2921ms 200 application/json; charset=utf-8
+2020-03-26 18:34:50.737 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/api/Meeting/45  
+2020-03-26 18:34:50.741 +08:00 [INF] Successfully validated the token.
+2020-03-26 18:34:50.745 +08:00 [INF] Authorization was successful.
+2020-03-26 18:34:50.746 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-03-26 18:34:50.752 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-03-26 18:34:50.756 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-开始查询id为45的会议
+2020-03-26 18:34:50.760 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-03-26 18:34:50.772 +08:00 [INF] Executed DbCommand (6ms) [Parameters=[@__meetingId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[Id], [m].[Address], [m].[Content], [m].[CreaterId], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingState]
+FROM [Meeting] AS [m]
+WHERE [m].[Id] = @__meetingId_0
+2020-03-26 18:34:50.781 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-查询id为45的创建者信息
+2020-03-26 18:34:50.786 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__userId_0
+2020-03-26 18:34:50.792 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-转换查询到的信息
+2020-03-26 18:34:50.796 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-返回数据,action结束
+2020-03-26 18:34:50.797 +08:00 [INF] Executing ObjectResult, writing value of type 'Infrastructure.Dto.MeetingOutputDto'.
+2020-03-26 18:34:50.800 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 45.2027ms
+2020-03-26 18:34:50.809 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-03-26 18:34:50.811 +08:00 [INF] Request finished in 74.1539ms 200 application/json; charset=utf-8
+2020-03-26 18:34:52.822 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-03-26 18:34:52.836 +08:00 [INF] Successfully validated the token.
+2020-03-26 18:34:52.838 +08:00 [INF] Authorization was successful.
+2020-03-26 18:34:52.839 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-03-26 18:34:52.848 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-03-26 18:34:52.853 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-查询2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483的会议列表
+2020-03-26 18:34:52.855 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-03-26 18:34:52.866 +08:00 [INF] Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[CreaterId], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingState]
+FROM [Meeting] AS [m]
+WHERE [m].[CreaterId] = @__userId_0
+2020-03-26 18:34:52.869 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-对2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483会议列表进行排序
+2020-03-26 18:34:52.870 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483的会议列表转换为dto
+2020-03-26 18:34:52.872 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-返回2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483的会议列表,action结束
+2020-03-26 18:34:52.873 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-03-26 18:34:52.879 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 28.0639ms
+2020-03-26 18:34:52.888 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-03-26 18:34:52.894 +08:00 [INF] Request finished in 71.8322ms 200 application/json; charset=utf-8
+2020-03-26 18:34:54.049 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/api/Meeting/46  
+2020-03-26 18:34:54.052 +08:00 [INF] Successfully validated the token.
+2020-03-26 18:34:54.054 +08:00 [INF] Authorization was successful.
+2020-03-26 18:34:54.055 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-03-26 18:34:54.058 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-03-26 18:34:54.065 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-开始查询id为46的会议
+2020-03-26 18:34:54.067 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-03-26 18:34:54.081 +08:00 [INF] Executed DbCommand (10ms) [Parameters=[@__meetingId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[Id], [m].[Address], [m].[Content], [m].[CreaterId], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingState]
+FROM [Meeting] AS [m]
+WHERE [m].[Id] = @__meetingId_0
+2020-03-26 18:34:54.086 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-查询id为46的创建者信息
+2020-03-26 18:34:54.094 +08:00 [INF] Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__userId_0
+2020-03-26 18:34:54.099 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-转换查询到的信息
+2020-03-26 18:34:54.100 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-返回数据,action结束
+2020-03-26 18:34:54.102 +08:00 [INF] Executing ObjectResult, writing value of type 'Infrastructure.Dto.MeetingOutputDto'.
+2020-03-26 18:34:54.104 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 40.2796ms
+2020-03-26 18:34:54.115 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-03-26 18:34:54.118 +08:00 [INF] Request finished in 68.5664ms 200 application/json; charset=utf-8
+2020-03-26 18:38:49.877 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/api/User_Meeting/PersonList?meetingId=46  
+2020-03-26 18:38:49.881 +08:00 [INF] Successfully validated the token.
+2020-03-26 18:38:49.883 +08:00 [INF] Authorization was successful.
+2020-03-26 18:38:49.884 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.GetPersonList (MyAPI)'
+2020-03-26 18:38:49.895 +08:00 [INF] Route matched with {action = "GetPersonList", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPersonList(Int32) on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-03-26 18:38:49.903 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-获取参会人员名单
+2020-03-26 18:38:49.915 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-03-26 18:38:50.295 +08:00 [INF] Executed DbCommand (33ms) [Parameters=[@__meetingId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[CheckInDate], [u].[MeetingId], [u].[RegistrationDate], [u].[UserId], [u].[User_MeetingStats], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [User_Meeting] AS [u]
+INNER JOIN [AspNetUsers] AS [a] ON [u].[UserId] = [a].[Id]
+WHERE [u].[MeetingId] = @__meetingId_0
+2020-03-26 18:38:50.335 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.User_MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-03-26 18:38:50.345 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.GetPersonList (MyAPI) in 445.342ms
+2020-03-26 18:38:50.347 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.GetPersonList (MyAPI)'
+2020-03-26 18:38:50.351 +08:00 [INF] Request finished in 473.901ms 200 application/json; charset=utf-8
+2020-03-26 18:42:05.477 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/api/User_Meeting/PersonList?meetingId=46  
+2020-03-26 18:42:05.482 +08:00 [INF] Successfully validated the token.
+2020-03-26 18:42:05.484 +08:00 [INF] Authorization was successful.
+2020-03-26 18:42:05.486 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.GetPersonList (MyAPI)'
+2020-03-26 18:42:05.488 +08:00 [INF] Route matched with {action = "GetPersonList", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPersonList(Int32) on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-03-26 18:42:05.494 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-获取参会人员名单
+2020-03-26 18:42:05.497 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-03-26 18:42:05.554 +08:00 [INF] Executed DbCommand (49ms) [Parameters=[@__meetingId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[CheckInDate], [u].[MeetingId], [u].[RegistrationDate], [u].[UserId], [u].[User_MeetingStats], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [User_Meeting] AS [u]
+INNER JOIN [AspNetUsers] AS [a] ON [u].[UserId] = [a].[Id]
+WHERE [u].[MeetingId] = @__meetingId_0
+2020-03-26 18:42:05.565 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.User_MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-03-26 18:42:05.569 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.GetPersonList (MyAPI) in 79.0459ms
+2020-03-26 18:42:05.572 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.GetPersonList (MyAPI)'
+2020-03-26 18:42:05.576 +08:00 [INF] Request finished in 98.9364ms 200 application/json; charset=utf-8
+2020-03-26 18:43:05.889 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-03-26 18:43:05.893 +08:00 [INF] Successfully validated the token.
+2020-03-26 18:43:05.895 +08:00 [INF] Authorization was successful.
+2020-03-26 18:43:05.896 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-03-26 18:43:05.897 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-03-26 18:43:05.900 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-查询2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483的会议列表
+2020-03-26 18:43:05.903 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-03-26 18:43:05.912 +08:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[CreaterId], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingState]
+FROM [Meeting] AS [m]
+WHERE [m].[CreaterId] = @__userId_0
+2020-03-26 18:43:05.916 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-对2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483会议列表进行排序
+2020-03-26 18:43:05.916 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483的会议列表转换为dto
+2020-03-26 18:43:05.917 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-返回2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483的会议列表,action结束
+2020-03-26 18:43:05.919 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-03-26 18:43:05.923 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 23.4648ms
+2020-03-26 18:43:05.930 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-03-26 18:43:05.931 +08:00 [INF] Request finished in 41.8302ms 200 application/json; charset=utf-8
+2020-03-26 18:44:26.766 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/api/User_Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-03-26 18:44:26.772 +08:00 [INF] Successfully validated the token.
+2020-03-26 18:44:26.780 +08:00 [INF] Authorization was successful.
+2020-03-26 18:44:26.784 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.GetJoinList (MyAPI)'
+2020-03-26 18:44:26.796 +08:00 [INF] Route matched with {action = "GetJoinList", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetJoinList(System.String) on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-03-26 18:44:26.802 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-获取参加会议的列表
+2020-03-26 18:44:26.806 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-03-26 18:44:26.845 +08:00 [INF] Executed DbCommand (18ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[CheckInDate], [u].[MeetingId], [u].[RegistrationDate], [u].[UserId], [u].[User_MeetingStats], [m].[Id], [m].[Address], [m].[Content], [m].[CreaterId], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingState]
+FROM [User_Meeting] AS [u]
+INNER JOIN [Meeting] AS [m] ON [u].[MeetingId] = [m].[Id]
+WHERE [u].[UserId] = @__userId_0
+2020-03-26 18:44:26.861 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-获取成功,action结束
+2020-03-26 18:44:26.875 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.User_MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-03-26 18:44:26.879 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.GetJoinList (MyAPI) in 80.2588ms
+2020-03-26 18:44:26.885 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.GetJoinList (MyAPI)'
+2020-03-26 18:44:26.888 +08:00 [INF] Request finished in 122.1361ms 200 application/json; charset=utf-8
+2020-03-26 18:44:42.990 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/api/User_Meeting/18  
+2020-03-26 18:44:42.992 +08:00 [INF] Successfully validated the token.
+2020-03-26 18:44:42.994 +08:00 [INF] Authorization was successful.
+2020-03-26 18:44:42.994 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.GetDetails (MyAPI)'
+2020-03-26 18:44:43.007 +08:00 [INF] Route matched with {action = "GetDetails", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetDetails(Int32) on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-03-26 18:44:43.012 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-获取中间表的所有信息
+2020-03-26 18:44:43.017 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-03-26 18:44:43.055 +08:00 [INF] Executed DbCommand (25ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CheckInDate], [u].[MeetingId], [u].[RegistrationDate], [u].[UserId], [u].[User_MeetingStats], [m].[Id], [m].[Address], [m].[Content], [m].[CreaterId], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingState]
+FROM [User_Meeting] AS [u]
+INNER JOIN [Meeting] AS [m] ON [u].[MeetingId] = [m].[Id]
+WHERE [u].[Id] = @__id_0
+2020-03-26 18:44:43.061 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__userId_0
+2020-03-26 18:44:43.072 +08:00 [INF] Executing ObjectResult, writing value of type 'Infrastructure.Dto.User_MeetingOutputDto'.
+2020-03-26 18:44:43.076 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.GetDetails (MyAPI) in 67.0317ms
+2020-03-26 18:44:43.078 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.GetDetails (MyAPI)'
+2020-03-26 18:44:43.082 +08:00 [INF] Request finished in 91.7343ms 200 application/json; charset=utf-8
+2020-03-26 18:44:45.358 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/api/User_Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-03-26 18:44:45.362 +08:00 [INF] Successfully validated the token.
+2020-03-26 18:44:45.364 +08:00 [INF] Authorization was successful.
+2020-03-26 18:44:45.365 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.GetJoinList (MyAPI)'
+2020-03-26 18:44:45.367 +08:00 [INF] Route matched with {action = "GetJoinList", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetJoinList(System.String) on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-03-26 18:44:45.374 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-获取参加会议的列表
+2020-03-26 18:44:45.375 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-03-26 18:44:45.386 +08:00 [INF] Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[CheckInDate], [u].[MeetingId], [u].[RegistrationDate], [u].[UserId], [u].[User_MeetingStats], [m].[Id], [m].[Address], [m].[Content], [m].[CreaterId], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingState]
+FROM [User_Meeting] AS [u]
+INNER JOIN [Meeting] AS [m] ON [u].[MeetingId] = [m].[Id]
+WHERE [u].[UserId] = @__userId_0
+2020-03-26 18:44:45.390 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-获取成功,action结束
+2020-03-26 18:44:45.391 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.User_MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-03-26 18:44:45.393 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.GetJoinList (MyAPI) in 20.9185ms
+2020-03-26 18:44:45.396 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.GetJoinList (MyAPI)'
+2020-03-26 18:44:45.399 +08:00 [INF] Request finished in 41.4977ms 200 application/json; charset=utf-8
+2020-03-26 19:00:17.032 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/api/User_Meeting/27  
+2020-03-26 19:00:17.035 +08:00 [INF] Successfully validated the token.
+2020-03-26 19:00:17.037 +08:00 [INF] Authorization was successful.
+2020-03-26 19:00:17.037 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.GetDetails (MyAPI)'
+2020-03-26 19:00:17.039 +08:00 [INF] Route matched with {action = "GetDetails", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetDetails(Int32) on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-03-26 19:00:17.043 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-获取中间表的所有信息
+2020-03-26 19:00:17.045 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-03-26 19:00:17.071 +08:00 [INF] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CheckInDate], [u].[MeetingId], [u].[RegistrationDate], [u].[UserId], [u].[User_MeetingStats], [m].[Id], [m].[Address], [m].[Content], [m].[CreaterId], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingState]
+FROM [User_Meeting] AS [u]
+INNER JOIN [Meeting] AS [m] ON [u].[MeetingId] = [m].[Id]
+WHERE [u].[Id] = @__id_0
+2020-03-26 19:00:17.083 +08:00 [INF] Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__userId_0
+2020-03-26 19:00:17.087 +08:00 [INF] Executing ObjectResult, writing value of type 'Infrastructure.Dto.User_MeetingOutputDto'.
+2020-03-26 19:00:17.089 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.GetDetails (MyAPI) in 47.2584ms
+2020-03-26 19:00:17.094 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.GetDetails (MyAPI)'
+2020-03-26 19:00:17.101 +08:00 [INF] Request finished in 68.9269ms 200 application/json; charset=utf-8
+2020-03-26 19:00:19.754 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/api/User_Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-03-26 19:00:19.762 +08:00 [INF] Successfully validated the token.
+2020-03-26 19:00:19.763 +08:00 [INF] Authorization was successful.
+2020-03-26 19:00:19.765 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.GetJoinList (MyAPI)'
+2020-03-26 19:00:19.766 +08:00 [INF] Route matched with {action = "GetJoinList", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetJoinList(System.String) on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-03-26 19:00:19.773 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-获取参加会议的列表
+2020-03-26 19:00:19.776 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-03-26 19:00:19.792 +08:00 [INF] Executed DbCommand (12ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[CheckInDate], [u].[MeetingId], [u].[RegistrationDate], [u].[UserId], [u].[User_MeetingStats], [m].[Id], [m].[Address], [m].[Content], [m].[CreaterId], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingState]
+FROM [User_Meeting] AS [u]
+INNER JOIN [Meeting] AS [m] ON [u].[MeetingId] = [m].[Id]
+WHERE [u].[UserId] = @__userId_0
+2020-03-26 19:00:19.807 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-获取成功,action结束
+2020-03-26 19:00:19.813 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.User_MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-03-26 19:00:19.817 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.GetJoinList (MyAPI) in 45.4522ms
+2020-03-26 19:00:19.846 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.GetJoinList (MyAPI)'
+2020-03-26 19:00:19.853 +08:00 [INF] Request finished in 98.7331ms 200 application/json; charset=utf-8
+2020-03-26 19:00:21.955 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/api/User_Meeting/30  
+2020-03-26 19:00:21.958 +08:00 [INF] Successfully validated the token.
+2020-03-26 19:00:21.960 +08:00 [INF] Authorization was successful.
+2020-03-26 19:00:21.961 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.GetDetails (MyAPI)'
+2020-03-26 19:00:21.962 +08:00 [INF] Route matched with {action = "GetDetails", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetDetails(Int32) on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-03-26 19:00:21.965 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-获取中间表的所有信息
+2020-03-26 19:00:21.967 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-03-26 19:00:21.971 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CheckInDate], [u].[MeetingId], [u].[RegistrationDate], [u].[UserId], [u].[User_MeetingStats], [m].[Id], [m].[Address], [m].[Content], [m].[CreaterId], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingState]
+FROM [User_Meeting] AS [u]
+INNER JOIN [Meeting] AS [m] ON [u].[MeetingId] = [m].[Id]
+WHERE [u].[Id] = @__id_0
+2020-03-26 19:00:21.978 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__userId_0
+2020-03-26 19:00:21.983 +08:00 [INF] Executing ObjectResult, writing value of type 'Infrastructure.Dto.User_MeetingOutputDto'.
+2020-03-26 19:00:21.985 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.GetDetails (MyAPI) in 20.5453ms
+2020-03-26 19:00:21.987 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.GetDetails (MyAPI)'
+2020-03-26 19:00:21.988 +08:00 [INF] Request finished in 33.5539ms 200 application/json; charset=utf-8
+2020-03-26 19:08:37.883 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/api/Statistics/statistNumber/2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483/false  
+2020-03-26 19:08:37.883 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/api/Statistics/statistNumber/2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483/true  
+2020-03-26 19:08:37.883 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/api/Statistics/statist_12_Meeting/2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-03-26 19:08:37.886 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/api/Statistics/statist_12_UserMeeting/2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-03-26 19:08:37.890 +08:00 [INF] Successfully validated the token.
+2020-03-26 19:08:37.891 +08:00 [INF] Successfully validated the token.
+2020-03-26 19:08:37.892 +08:00 [INF] Successfully validated the token.
+2020-03-26 19:08:37.893 +08:00 [INF] Successfully validated the token.
+2020-03-26 19:08:37.895 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.StatisticsController.getAll (MyAPI)'
+2020-03-26 19:08:37.896 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.StatisticsController.getAll (MyAPI)'
+2020-03-26 19:08:37.896 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.StatisticsController.getMyMeeting (MyAPI)'
+2020-03-26 19:08:37.898 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.StatisticsController.getUser_Meeting (MyAPI)'
+2020-03-26 19:08:37.909 +08:00 [INF] Route matched with {action = "getUser_Meeting", controller = "Statistics"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] getUser_Meeting(System.String) on controller MyAPI.Controllers.StatisticsController (MyAPI).
+2020-03-26 19:08:37.909 +08:00 [INF] Route matched with {action = "getAll", controller = "Statistics"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] getAll(System.String, Boolean) on controller MyAPI.Controllers.StatisticsController (MyAPI).
+2020-03-26 19:08:37.910 +08:00 [INF] Route matched with {action = "getMyMeeting", controller = "Statistics"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] getMyMeeting(System.String) on controller MyAPI.Controllers.StatisticsController (MyAPI).
+2020-03-26 19:08:37.912 +08:00 [INF] Route matched with {action = "getAll", controller = "Statistics"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] getAll(System.String, Boolean) on controller MyAPI.Controllers.StatisticsController (MyAPI).
+2020-03-26 19:08:37.916 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-查询12个月内参加的会议
+2020-03-26 19:08:37.920 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-查询12个月内组织的会议
+2020-03-26 19:08:37.928 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-03-26 19:08:37.928 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-03-26 19:08:37.943 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-查询当月/全部的会议数据
+2020-03-26 19:08:37.943 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-查询当月/全部的会议数据
+2020-03-26 19:08:37.947 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-03-26 19:08:37.947 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-03-26 19:08:38.022 +08:00 [INF] Executed DbCommand (9ms) [Parameters=[@__userid_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Meeting] AS [m]
+WHERE [m].[CreaterId] = @__userid_0
+2020-03-26 19:08:38.031 +08:00 [INF] Executed DbCommand (7ms) [Parameters=[@__start_0='?' (DbType = DateTime2), @__end_1='?' (DbType = DateTime2), @__userid_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Meeting] AS [m]
+WHERE (([m].[DateTime] >= @__start_0) AND ([m].[DateTime] <= @__end_1)) AND ([m].[CreaterId] = @__userid_2)
+2020-03-26 19:08:38.044 +08:00 [INF] Executed DbCommand (29ms) [Parameters=[@__start_0='?' (DbType = DateTime2), @__end_1='?' (DbType = DateTime2), @__userid_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [User_Meeting] AS [u]
+WHERE (([u].[CheckInDate] >= @__start_0) AND ([u].[CheckInDate] <= @__end_1)) AND ([u].[UserId] = @__userid_2)
+2020-03-26 19:08:38.052 +08:00 [INF] Executed DbCommand (9ms) [Parameters=[@__8__locals1_userid_0='?' (Size = 450), @__start_1='?' (DbType = DateTime2), @__end_2='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Meeting] AS [m]
+WHERE (([m].[CreaterId] = @__8__locals1_userid_0) AND ([m].[DateTime] > @__start_1)) AND ([m].[DateTime] < @__end_2)
+2020-03-26 19:08:38.057 +08:00 [INF] Executed DbCommand (4ms) [Parameters=[@__start_0='?' (DbType = DateTime2), @__end_1='?' (DbType = DateTime2), @__userid_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [User_Meeting] AS [u]
+WHERE (([u].[CheckInDate] >= @__start_0) AND ([u].[CheckInDate] <= @__end_1)) AND ([u].[UserId] = @__userid_2)
+2020-03-26 19:08:38.068 +08:00 [INF] Executed DbCommand (14ms) [Parameters=[@__userid_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [User_Meeting] AS [u]
+WHERE [u].[UserId] = @__userid_0
+2020-03-26 19:08:38.066 +08:00 [INF] Executed DbCommand (12ms) [Parameters=[@__start_0='?' (DbType = DateTime2), @__end_1='?' (DbType = DateTime2), @__userid_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Meeting] AS [m]
+WHERE (([m].[DateTime] >= @__start_0) AND ([m].[DateTime] <= @__end_1)) AND ([m].[CreaterId] = @__userid_2)
+2020-03-26 19:08:38.078 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__start_0='?' (DbType = DateTime2), @__end_1='?' (DbType = DateTime2), @__userid_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [User_Meeting] AS [u]
+WHERE (([u].[CheckInDate] >= @__start_0) AND ([u].[CheckInDate] <= @__end_1)) AND ([u].[UserId] = @__userid_2)
+2020-03-26 19:08:38.081 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2020-03-26 19:08:38.085 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__start_0='?' (DbType = DateTime2), @__end_1='?' (DbType = DateTime2), @__userid_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Meeting] AS [m]
+WHERE (([m].[DateTime] >= @__start_0) AND ([m].[DateTime] <= @__end_1)) AND ([m].[CreaterId] = @__userid_2)
+2020-03-26 19:08:38.085 +08:00 [INF] Executed DbCommand (10ms) [Parameters=[@__8__locals1_userid_0='?' (Size = 450), @__start_1='?' (DbType = DateTime2), @__end_2='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [User_Meeting] AS [u]
+WHERE (([u].[UserId] = @__8__locals1_userid_0) AND ([u].[CheckInDate] > @__start_1)) AND ([u].[CheckInDate] < @__end_2)
+2020-03-26 19:08:38.090 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[@__start_0='?' (DbType = DateTime2), @__end_1='?' (DbType = DateTime2), @__userid_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [User_Meeting] AS [u]
+WHERE (([u].[CheckInDate] >= @__start_0) AND ([u].[CheckInDate] <= @__end_1)) AND ([u].[UserId] = @__userid_2)
+2020-03-26 19:08:38.096 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__start_0='?' (DbType = DateTime2), @__end_1='?' (DbType = DateTime2), @__userid_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Meeting] AS [m]
+WHERE (([m].[DateTime] >= @__start_0) AND ([m].[DateTime] <= @__end_1)) AND ([m].[CreaterId] = @__userid_2)
+2020-03-26 19:08:38.098 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2020-03-26 19:08:38.104 +08:00 [INF] Executed action MyAPI.Controllers.StatisticsController.getAll (MyAPI) in 188.9396ms
+2020-03-26 19:08:38.102 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__start_0='?' (DbType = DateTime2), @__end_1='?' (DbType = DateTime2), @__userid_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [User_Meeting] AS [u]
+WHERE (([u].[CheckInDate] >= @__start_0) AND ([u].[CheckInDate] <= @__end_1)) AND ([u].[UserId] = @__userid_2)
+2020-03-26 19:08:38.110 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.StatisticsController.getAll (MyAPI)'
+2020-03-26 19:08:38.110 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[@__start_0='?' (DbType = DateTime2), @__end_1='?' (DbType = DateTime2), @__userid_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Meeting] AS [m]
+WHERE (([m].[DateTime] >= @__start_0) AND ([m].[DateTime] <= @__end_1)) AND ([m].[CreaterId] = @__userid_2)
+2020-03-26 19:08:38.118 +08:00 [INF] Request finished in 235.1605ms 200 application/json; charset=utf-8
+2020-03-26 19:08:38.124 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[@__start_0='?' (DbType = DateTime2), @__end_1='?' (DbType = DateTime2), @__userid_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [User_Meeting] AS [u]
+WHERE (([u].[CheckInDate] >= @__start_0) AND ([u].[CheckInDate] <= @__end_1)) AND ([u].[UserId] = @__userid_2)
+2020-03-26 19:08:38.109 +08:00 [INF] Executed action MyAPI.Controllers.StatisticsController.getAll (MyAPI) in 187.2319ms
+2020-03-26 19:08:38.132 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.StatisticsController.getAll (MyAPI)'
+2020-03-26 19:08:38.134 +08:00 [INF] Request finished in 251.5255ms 200 application/json; charset=utf-8
+2020-03-26 19:08:38.128 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__start_0='?' (DbType = DateTime2), @__end_1='?' (DbType = DateTime2), @__userid_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Meeting] AS [m]
+WHERE (([m].[DateTime] >= @__start_0) AND ([m].[DateTime] <= @__end_1)) AND ([m].[CreaterId] = @__userid_2)
+2020-03-26 19:08:38.134 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[@__start_0='?' (DbType = DateTime2), @__end_1='?' (DbType = DateTime2), @__userid_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [User_Meeting] AS [u]
+WHERE (([u].[CheckInDate] >= @__start_0) AND ([u].[CheckInDate] <= @__end_1)) AND ([u].[UserId] = @__userid_2)
+2020-03-26 19:08:38.142 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[@__start_0='?' (DbType = DateTime2), @__end_1='?' (DbType = DateTime2), @__userid_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Meeting] AS [m]
+WHERE (([m].[DateTime] >= @__start_0) AND ([m].[DateTime] <= @__end_1)) AND ([m].[CreaterId] = @__userid_2)
+2020-03-26 19:08:38.145 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__start_0='?' (DbType = DateTime2), @__end_1='?' (DbType = DateTime2), @__userid_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [User_Meeting] AS [u]
+WHERE (([u].[CheckInDate] >= @__start_0) AND ([u].[CheckInDate] <= @__end_1)) AND ([u].[UserId] = @__userid_2)
+2020-03-26 19:08:38.151 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__start_0='?' (DbType = DateTime2), @__end_1='?' (DbType = DateTime2), @__userid_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Meeting] AS [m]
+WHERE (([m].[DateTime] >= @__start_0) AND ([m].[DateTime] <= @__end_1)) AND ([m].[CreaterId] = @__userid_2)
+2020-03-26 19:08:38.155 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[@__start_0='?' (DbType = DateTime2), @__end_1='?' (DbType = DateTime2), @__userid_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [User_Meeting] AS [u]
+WHERE (([u].[CheckInDate] >= @__start_0) AND ([u].[CheckInDate] <= @__end_1)) AND ([u].[UserId] = @__userid_2)
+2020-03-26 19:08:38.159 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__start_0='?' (DbType = DateTime2), @__end_1='?' (DbType = DateTime2), @__userid_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Meeting] AS [m]
+WHERE (([m].[DateTime] >= @__start_0) AND ([m].[DateTime] <= @__end_1)) AND ([m].[CreaterId] = @__userid_2)
+2020-03-26 19:08:38.162 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__start_0='?' (DbType = DateTime2), @__end_1='?' (DbType = DateTime2), @__userid_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [User_Meeting] AS [u]
+WHERE (([u].[CheckInDate] >= @__start_0) AND ([u].[CheckInDate] <= @__end_1)) AND ([u].[UserId] = @__userid_2)
+2020-03-26 19:08:38.165 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__start_0='?' (DbType = DateTime2), @__end_1='?' (DbType = DateTime2), @__userid_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Meeting] AS [m]
+WHERE (([m].[DateTime] >= @__start_0) AND ([m].[DateTime] <= @__end_1)) AND ([m].[CreaterId] = @__userid_2)
+2020-03-26 19:08:38.168 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__start_0='?' (DbType = DateTime2), @__end_1='?' (DbType = DateTime2), @__userid_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [User_Meeting] AS [u]
+WHERE (([u].[CheckInDate] >= @__start_0) AND ([u].[CheckInDate] <= @__end_1)) AND ([u].[UserId] = @__userid_2)
+2020-03-26 19:08:38.175 +08:00 [INF] Executed DbCommand (4ms) [Parameters=[@__start_0='?' (DbType = DateTime2), @__end_1='?' (DbType = DateTime2), @__userid_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Meeting] AS [m]
+WHERE (([m].[DateTime] >= @__start_0) AND ([m].[DateTime] <= @__end_1)) AND ([m].[CreaterId] = @__userid_2)
+2020-03-26 19:08:38.178 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__start_0='?' (DbType = DateTime2), @__end_1='?' (DbType = DateTime2), @__userid_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [User_Meeting] AS [u]
+WHERE (([u].[CheckInDate] >= @__start_0) AND ([u].[CheckInDate] <= @__end_1)) AND ([u].[UserId] = @__userid_2)
+2020-03-26 19:08:38.182 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__start_0='?' (DbType = DateTime2), @__end_1='?' (DbType = DateTime2), @__userid_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Meeting] AS [m]
+WHERE (([m].[DateTime] >= @__start_0) AND ([m].[DateTime] <= @__end_1)) AND ([m].[CreaterId] = @__userid_2)
+2020-03-26 19:08:38.183 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.StatisticsDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-03-26 19:08:38.185 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.StatisticsDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-03-26 19:08:38.192 +08:00 [INF] Executed action MyAPI.Controllers.StatisticsController.getMyMeeting (MyAPI) in 274.091ms
+2020-03-26 19:08:38.192 +08:00 [INF] Executed action MyAPI.Controllers.StatisticsController.getUser_Meeting (MyAPI) in 279.4041ms
+2020-03-26 19:08:38.196 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.StatisticsController.getUser_Meeting (MyAPI)'
+2020-03-26 19:08:38.194 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.StatisticsController.getMyMeeting (MyAPI)'
+2020-03-26 19:08:38.201 +08:00 [INF] Request finished in 317.5309ms 200 application/json; charset=utf-8
+2020-03-26 19:08:38.199 +08:00 [INF] Request finished in 313.2793ms 200 application/json; charset=utf-8
+2020-03-26 19:18:17.923 +08:00 [DBG] 程序启动
+2020-03-26 19:18:19.637 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-03-26 19:18:20.291 +08:00 [INF] Now listening on: http://192.168.1.2:5000
+2020-03-26 19:18:20.292 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-03-26 19:18:20.293 +08:00 [INF] Hosting environment: Development
+2020-03-26 19:18:20.294 +08:00 [INF] Content root path: E:\SandTablePriject\.net core3.1\MyAPI\MyAPI
+2020-03-26 19:42:24.939 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-03-26 19:42:26.245 +08:00 [INF] Successfully validated the token.
+2020-03-26 19:42:26.261 +08:00 [INF] Authorization was successful.
+2020-03-26 19:42:26.263 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-03-26 19:42:26.336 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-03-26 19:42:27.276 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-查询2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483的会议列表
+2020-03-26 19:42:28.503 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-03-26 19:42:30.325 +08:00 [INF] Executed DbCommand (344ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[CreaterId], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingState]
+FROM [Meeting] AS [m]
+WHERE [m].[CreaterId] = @__userId_0
+2020-03-26 19:42:30.631 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-对2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483会议列表进行排序
+2020-03-26 19:42:30.693 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483的会议列表转换为dto
+2020-03-26 19:42:30.804 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-返回2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483的会议列表,action结束
+2020-03-26 19:42:30.927 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-03-26 19:42:31.093 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 4729.8628ms
+2020-03-26 19:42:31.434 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-03-26 19:42:31.447 +08:00 [INF] Request finished in 6521.5279ms 200 application/json; charset=utf-8
+2020-03-26 19:42:34.789 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/api/Meeting/45  
+2020-03-26 19:42:34.853 +08:00 [INF] Successfully validated the token.
+2020-03-26 19:42:34.858 +08:00 [INF] Authorization was successful.
+2020-03-26 19:42:34.868 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-03-26 19:42:34.922 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-03-26 19:42:34.933 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-开始查询id为45的会议
+2020-03-26 19:42:34.992 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-03-26 19:42:35.041 +08:00 [INF] Executed DbCommand (17ms) [Parameters=[@__meetingId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[Id], [m].[Address], [m].[Content], [m].[CreaterId], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingState]
+FROM [Meeting] AS [m]
+WHERE [m].[Id] = @__meetingId_0
+2020-03-26 19:42:35.050 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-查询id为45的创建者信息
+2020-03-26 19:42:35.072 +08:00 [INF] Executed DbCommand (10ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__userId_0
+2020-03-26 19:42:35.188 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-转换查询到的信息
+2020-03-26 19:42:35.240 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-返回数据,action结束
+2020-03-26 19:42:35.244 +08:00 [INF] Executing ObjectResult, writing value of type 'Infrastructure.Dto.MeetingOutputDto'.
+2020-03-26 19:42:35.246 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 320.8275ms
+2020-03-26 19:42:35.274 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-03-26 19:42:35.276 +08:00 [INF] Request finished in 488.1274ms 200 application/json; charset=utf-8
+2020-03-26 19:42:37.295 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-03-26 19:42:37.318 +08:00 [INF] Successfully validated the token.
+2020-03-26 19:42:37.375 +08:00 [INF] Authorization was successful.
+2020-03-26 19:42:37.386 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-03-26 19:42:37.396 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-03-26 19:42:37.418 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-查询2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483的会议列表
+2020-03-26 19:42:37.439 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-03-26 19:42:37.474 +08:00 [INF] Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[CreaterId], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingState]
+FROM [Meeting] AS [m]
+WHERE [m].[CreaterId] = @__userId_0
+2020-03-26 19:42:37.485 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-对2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483会议列表进行排序
+2020-03-26 19:42:37.487 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483的会议列表转换为dto
+2020-03-26 19:42:37.489 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-返回2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483的会议列表,action结束
+2020-03-26 19:42:37.490 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-03-26 19:42:37.494 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 89.2199ms
+2020-03-26 19:42:37.509 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-03-26 19:42:37.511 +08:00 [INF] Request finished in 218.6307ms 200 application/json; charset=utf-8
+2020-03-26 19:42:39.946 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/api/Meeting/46  
+2020-03-26 19:42:39.953 +08:00 [INF] Successfully validated the token.
+2020-03-26 19:42:39.956 +08:00 [INF] Authorization was successful.
+2020-03-26 19:42:39.957 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-03-26 19:42:39.959 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-03-26 19:42:39.963 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-开始查询id为46的会议
+2020-03-26 19:42:39.966 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-03-26 19:42:39.974 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[@__meetingId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[Id], [m].[Address], [m].[Content], [m].[CreaterId], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingState]
+FROM [Meeting] AS [m]
+WHERE [m].[Id] = @__meetingId_0
+2020-03-26 19:42:39.980 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-查询id为46的创建者信息
+2020-03-26 19:42:39.984 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__userId_0
+2020-03-26 19:42:39.989 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-转换查询到的信息
+2020-03-26 19:42:39.991 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-返回数据,action结束
+2020-03-26 19:42:39.992 +08:00 [INF] Executing ObjectResult, writing value of type 'Infrastructure.Dto.MeetingOutputDto'.
+2020-03-26 19:42:39.997 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 35.3904ms
+2020-03-26 19:42:40.010 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-03-26 19:42:40.013 +08:00 [INF] Request finished in 66.4867ms 200 application/json; charset=utf-8
+2020-03-26 19:46:26.673 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-03-26 19:46:26.702 +08:00 [INF] Successfully validated the token.
+2020-03-26 19:46:26.708 +08:00 [INF] Authorization was successful.
+2020-03-26 19:46:26.711 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-03-26 19:46:26.721 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-03-26 19:46:26.735 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-查询2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483的会议列表
+2020-03-26 19:46:26.741 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-03-26 19:46:26.758 +08:00 [INF] Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[CreaterId], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingState]
+FROM [Meeting] AS [m]
+WHERE [m].[CreaterId] = @__userId_0
+2020-03-26 19:46:26.763 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-对2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483会议列表进行排序
+2020-03-26 19:46:26.768 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483的会议列表转换为dto
+2020-03-26 19:46:26.770 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-返回2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483的会议列表,action结束
+2020-03-26 19:46:26.772 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-03-26 19:46:26.775 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 44.9874ms
+2020-03-26 19:46:26.786 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-03-26 19:46:26.788 +08:00 [INF] Request finished in 114.8938ms 200 application/json; charset=utf-8
+2020-03-26 19:46:28.278 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/api/Meeting/52  
+2020-03-26 19:46:28.282 +08:00 [INF] Successfully validated the token.
+2020-03-26 19:46:28.284 +08:00 [INF] Authorization was successful.
+2020-03-26 19:46:28.285 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-03-26 19:46:28.288 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-03-26 19:46:28.292 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-开始查询id为52的会议
+2020-03-26 19:46:28.295 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-03-26 19:46:28.303 +08:00 [INF] Executed DbCommand (4ms) [Parameters=[@__meetingId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[Id], [m].[Address], [m].[Content], [m].[CreaterId], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingState]
+FROM [Meeting] AS [m]
+WHERE [m].[Id] = @__meetingId_0
+2020-03-26 19:46:28.308 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-查询id为52的创建者信息
+2020-03-26 19:46:28.312 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__userId_0
+2020-03-26 19:46:28.317 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-转换查询到的信息
+2020-03-26 19:46:28.318 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-返回数据,action结束
+2020-03-26 19:46:28.320 +08:00 [INF] Executing ObjectResult, writing value of type 'Infrastructure.Dto.MeetingOutputDto'.
+2020-03-26 19:46:28.322 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 32.0489ms
+2020-03-26 19:46:28.324 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-03-26 19:46:28.326 +08:00 [INF] Request finished in 48.0134ms 200 application/json; charset=utf-8
+2020-03-26 19:58:26.884 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/api/User_Meeting/TodayUserMeeting application/json 
+2020-03-26 19:58:26.889 +08:00 [INF] Successfully validated the token.
+2020-03-26 19:58:26.890 +08:00 [INF] Authorization was successful.
+2020-03-26 19:58:26.892 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.GetTodayMeetingList (MyAPI)'
+2020-03-26 19:58:26.902 +08:00 [INF] Route matched with {action = "GetTodayMeetingList", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTodayMeetingList() on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-03-26 19:58:26.909 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-获取今天参加会议的列表
+2020-03-26 19:58:26.915 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-03-26 19:58:27.344 +08:00 [INF] Executed DbCommand (17ms) [Parameters=[@__userId_0='?' (Size = 450), @__dateTime_2='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[CheckInDate], [u].[MeetingId], [u].[RegistrationDate], [u].[UserId], [u].[User_MeetingStats], [m].[Id], [m].[Address], [m].[Content], [m].[CreaterId], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingState]
+FROM [User_Meeting] AS [u]
+INNER JOIN [Meeting] AS [m] ON [u].[MeetingId] = [m].[Id]
+WHERE ([u].[UserId] = @__userId_0) AND (DATEDIFF(DAY, [m].[DateTime], @__dateTime_2) = 0)
+2020-03-26 19:58:27.361 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.User_MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-03-26 19:58:27.367 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.GetTodayMeetingList (MyAPI) in 461.1677ms
+2020-03-26 19:58:27.371 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.GetTodayMeetingList (MyAPI)'
+2020-03-26 19:58:27.373 +08:00 [INF] Request finished in 489.2287ms 200 application/json; charset=utf-8
+2020-03-26 20:01:05.234 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/api/User_Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-03-26 20:01:05.244 +08:00 [INF] Successfully validated the token.
+2020-03-26 20:01:05.246 +08:00 [INF] Authorization was successful.
+2020-03-26 20:01:05.247 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.GetJoinList (MyAPI)'
+2020-03-26 20:01:05.273 +08:00 [INF] Route matched with {action = "GetJoinList", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetJoinList(System.String) on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-03-26 20:01:05.283 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-获取参加会议的列表
+2020-03-26 20:01:05.340 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-03-26 20:01:05.460 +08:00 [INF] Executed DbCommand (16ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[CheckInDate], [u].[MeetingId], [u].[RegistrationDate], [u].[UserId], [u].[User_MeetingStats], [m].[Id], [m].[Address], [m].[Content], [m].[CreaterId], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingState]
+FROM [User_Meeting] AS [u]
+INNER JOIN [Meeting] AS [m] ON [u].[MeetingId] = [m].[Id]
+WHERE [u].[UserId] = @__userId_0
+2020-03-26 20:01:05.523 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-获取成功,action结束
+2020-03-26 20:01:05.525 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.User_MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-03-26 20:01:05.541 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.GetJoinList (MyAPI) in 263.0123ms
+2020-03-26 20:01:05.558 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.GetJoinList (MyAPI)'
+2020-03-26 20:01:05.567 +08:00 [INF] Request finished in 332.9203ms 200 application/json; charset=utf-8
+2020-03-26 20:03:25.867 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/api/User_Meeting/TodayUserMeeting application/json 
+2020-03-26 20:03:25.893 +08:00 [INF] Successfully validated the token.
+2020-03-26 20:03:25.895 +08:00 [INF] Authorization was successful.
+2020-03-26 20:03:25.895 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.GetTodayMeetingList (MyAPI)'
+2020-03-26 20:03:25.897 +08:00 [INF] Route matched with {action = "GetTodayMeetingList", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTodayMeetingList() on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-03-26 20:03:25.900 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-获取今天参加会议的列表
+2020-03-26 20:03:25.902 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-03-26 20:03:25.916 +08:00 [INF] Executed DbCommand (10ms) [Parameters=[@__userId_0='?' (Size = 450), @__dateTime_2='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[CheckInDate], [u].[MeetingId], [u].[RegistrationDate], [u].[UserId], [u].[User_MeetingStats], [m].[Id], [m].[Address], [m].[Content], [m].[CreaterId], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingState]
+FROM [User_Meeting] AS [u]
+INNER JOIN [Meeting] AS [m] ON [u].[MeetingId] = [m].[Id]
+WHERE ([u].[UserId] = @__userId_0) AND (DATEDIFF(DAY, [m].[DateTime], @__dateTime_2) = 0)
+2020-03-26 20:03:25.924 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.User_MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-03-26 20:03:25.946 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.GetTodayMeetingList (MyAPI) in 48.256ms
+2020-03-26 20:03:25.950 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.GetTodayMeetingList (MyAPI)'
+2020-03-26 20:03:25.952 +08:00 [INF] Request finished in 85.7648ms 200 application/json; charset=utf-8
+2020-03-26 20:20:25.246 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/api/Meeting/analysisInviteCode?inviteCode=dd application/json 
+2020-03-26 20:20:25.251 +08:00 [INF] Successfully validated the token.
+2020-03-26 20:20:25.255 +08:00 [INF] Authorization was successful.
+2020-03-26 20:20:25.256 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.AnalysisInviteCode (MyAPI)'
+2020-03-26 20:20:25.263 +08:00 [INF] Route matched with {action = "AnalysisInviteCode", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AnalysisInviteCode(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-03-26 20:20:25.483 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-解析无效邀请码返回400
+2020-03-26 20:20:25.485 +08:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2020-03-26 20:20:25.489 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.AnalysisInviteCode (MyAPI) in 221.2239ms
+2020-03-26 20:20:25.499 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.AnalysisInviteCode (MyAPI)'
+2020-03-26 20:20:25.501 +08:00 [INF] Request finished in 255.1153ms 400 text/plain; charset=utf-8
+2020-03-26 20:20:28.542 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/api/Meeting/analysisInviteCode?inviteCode=ccc application/json 
+2020-03-26 20:20:28.546 +08:00 [INF] Successfully validated the token.
+2020-03-26 20:20:28.547 +08:00 [INF] Authorization was successful.
+2020-03-26 20:20:28.548 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.AnalysisInviteCode (MyAPI)'
+2020-03-26 20:20:28.550 +08:00 [INF] Route matched with {action = "AnalysisInviteCode", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AnalysisInviteCode(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-03-26 20:20:28.619 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-解析无效邀请码返回400
+2020-03-26 20:20:28.620 +08:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2020-03-26 20:20:28.623 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.AnalysisInviteCode (MyAPI) in 69.9937ms
+2020-03-26 20:20:28.624 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.AnalysisInviteCode (MyAPI)'
+2020-03-26 20:20:28.626 +08:00 [INF] Request finished in 84.0926ms 400 text/plain; charset=utf-8
+2020-03-26 20:21:40.749 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-03-26 20:21:40.757 +08:00 [INF] Successfully validated the token.
+2020-03-26 20:21:40.759 +08:00 [INF] Authorization was successful.
+2020-03-26 20:21:40.760 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-03-26 20:21:40.763 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-03-26 20:21:40.767 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-查询2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483的会议列表
+2020-03-26 20:21:40.778 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-03-26 20:21:40.826 +08:00 [INF] Executed DbCommand (14ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[CreaterId], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingState]
+FROM [Meeting] AS [m]
+WHERE [m].[CreaterId] = @__userId_0
+2020-03-26 20:21:40.843 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-对2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483会议列表进行排序
+2020-03-26 20:21:40.846 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483的会议列表转换为dto
+2020-03-26 20:21:40.847 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-返回2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483的会议列表,action结束
+2020-03-26 20:21:40.849 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-03-26 20:21:40.857 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 91.8115ms
+2020-03-26 20:21:40.878 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-03-26 20:21:40.906 +08:00 [INF] Request finished in 157.0817ms 200 application/json; charset=utf-8
+2020-03-26 20:21:44.300 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/api/Meeting/51  
+2020-03-26 20:21:44.317 +08:00 [INF] Successfully validated the token.
+2020-03-26 20:21:44.320 +08:00 [INF] Authorization was successful.
+2020-03-26 20:21:44.321 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-03-26 20:21:44.331 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-03-26 20:21:44.337 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-开始查询id为51的会议
+2020-03-26 20:21:44.340 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-03-26 20:21:44.349 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[@__meetingId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[Id], [m].[Address], [m].[Content], [m].[CreaterId], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingState]
+FROM [Meeting] AS [m]
+WHERE [m].[Id] = @__meetingId_0
+2020-03-26 20:21:44.357 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-查询id为51的创建者信息
+2020-03-26 20:21:44.366 +08:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__userId_0
+2020-03-26 20:21:44.379 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-转换查询到的信息
+2020-03-26 20:21:44.385 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-返回数据,action结束
+2020-03-26 20:21:44.393 +08:00 [INF] Executing ObjectResult, writing value of type 'Infrastructure.Dto.MeetingOutputDto'.
+2020-03-26 20:21:44.399 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 63.3604ms
+2020-03-26 20:21:44.725 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-03-26 20:21:44.728 +08:00 [INF] Request finished in 428.4922ms 200 application/json; charset=utf-8
+2020-03-26 20:21:58.277 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/api/Meeting/analysisInviteCode?inviteCode=XPYc%252BU9%252F0qgj7CnIJkRD5EYeCLdNK52HRMQDnuMn49vO8Bpm0UNcSXbk1Tgu2P5E application/json 
+2020-03-26 20:21:58.281 +08:00 [INF] Successfully validated the token.
+2020-03-26 20:21:58.282 +08:00 [INF] Authorization was successful.
+2020-03-26 20:21:58.283 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.AnalysisInviteCode (MyAPI)'
+2020-03-26 20:21:58.285 +08:00 [INF] Route matched with {action = "AnalysisInviteCode", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AnalysisInviteCode(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-03-26 20:21:58.307 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-解析成功后,获取会议信息
+2020-03-26 20:21:58.309 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-03-26 20:21:58.316 +08:00 [INF] Executed DbCommand (4ms) [Parameters=[@__meetingId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[Id], [m].[Address], [m].[Content], [m].[CreaterId], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingState]
+FROM [Meeting] AS [m]
+WHERE [m].[Id] = @__meetingId_0
+2020-03-26 20:21:58.323 +08:00 [DBG] 2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483-返回数据,action结束
+2020-03-26 20:21:58.325 +08:00 [INF] Executing ObjectResult, writing value of type 'Infrastructure.Dto.MeetingOutputDto'.
+2020-03-26 20:21:58.327 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.AnalysisInviteCode (MyAPI) in 38.9692ms
+2020-03-26 20:21:58.329 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.AnalysisInviteCode (MyAPI)'
+2020-03-26 20:21:58.331 +08:00 [INF] Request finished in 53.7393ms 200 application/json; charset=utf-8

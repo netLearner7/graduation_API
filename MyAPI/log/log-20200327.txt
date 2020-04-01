@@ -1,0 +1,19 @@
+2020-03-27 09:18:38.336 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/  
+2020-03-27 09:18:38.408 +08:00 [INF] Request finished in 71.1967ms 301 
+2020-03-27 09:18:38.417 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/index.html  
+2020-03-27 09:18:38.513 +08:00 [INF] Request finished in 95.4593ms 200 text/html;charset=utf-8
+2020-03-27 09:18:38.567 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/swagger-ui.css  
+2020-03-27 09:18:38.568 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/swagger-ui-bundle.js  
+2020-03-27 09:18:38.568 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/swagger-ui-standalone-preset.js  
+2020-03-27 09:18:38.695 +08:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2020-03-27 09:18:38.730 +08:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2020-03-27 09:18:38.785 +08:00 [INF] Request finished in 217.795ms 200 text/css
+2020-03-27 09:18:38.791 +08:00 [INF] Request finished in 222.7906ms 200 application/javascript
+2020-03-27 09:18:38.853 +08:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2020-03-27 09:18:38.857 +08:00 [INF] Request finished in 289.5248ms 200 application/javascript
+2020-03-27 09:18:39.143 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/swagger/v1/swagger.json  
+2020-03-27 09:18:39.168 +08:00 [INF] Request starting HTTP/1.1 GET http://192.168.1.2:5000/favicon-32x32.png  
+2020-03-27 09:18:39.198 +08:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2020-03-27 09:18:39.273 +08:00 [INF] Request finished in 105.1678ms 200 image/png
+2020-03-27 09:18:39.614 +08:00 [INF] Request finished in 470.9541ms 200 application/json;charset=utf-8
+2020-03-27 12:43:36.415 +08:00 [INF] Application is shutting down...

@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MyAPI</name>
+    </assembly>
+    <members>
+        <member name="M:MyAPI.Controllers.MeetingController.Get(System.Int32)">
+            <summary>
+            根据会议id查询会议详情
+            </summary>
+            <param name="meetingId">会议id</param>
+            <returns>meeting对象</returns>
+            <response code="200">查询成功</response>
+            <response code="500">程序内部错误，导致查询不成功</response>
+        </member>
+        <member name="M:MyAPI.Controllers.MeetingController.Get(System.String)">
+            <summary>
+            根据UserId查询会议详情
+            </summary>
+            <param name="userId">会议创建人id</param>
+            <returns>List（meeting）对象</returns>
+            <response code="200">查询成功</response>
+            <response code="500">程序内部错误，导致查询不成功</response>
+        </member>
+        <member name="M:MyAPI.Controllers.MeetingController.Post(Infrastructure.Dto.MeetingInputDto)">
+            <summary>
+            创建会议
+            </summary>
+            <param name="meetingAddDto">会议信息（不需要填写id和userid）</param>
+            <returns>返回创建完的Meeting</returns>
+            <response code="201">创建成功</response>
+            <response code="500">程序内部错误，导致创建不成功</response>
+        </member>
+        <member name="M:MyAPI.Controllers.MeetingController.Patch(System.Int32,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{Infrastructure.Dto.MeetingInputDto})">
+            <summary>
+            会议局部修改
+            </summary>
+            <param name="meetingId">会议id int类型</param>
+            <param name="document">
+            局部修改操作： [{op:"操作符(add/move/replace/remove)",path:"/参数名",value:"修改后的值"}]
+            </param>
+            <returns></returns>
+            <response code="204">更新成功</response>
+            <response code="400">数据格式不正确</response>
+            <response code="404">未找到该会议</response>
+            <response code="500">服务器内部错误，更新失败</response>
+        </member>
+        <member name="M:MyAPI.Controllers.MeetingController.Put(Infrastructure.Dto.MeetingInputDto)">
+            <summary>
+            修改操作
+            </summary>
+            <param name="meetingAddDto"></param>
+            <returns>不做返回</returns>
+            <response code="204">更新成功</response>
+            <response code="500">更新失败</response>
+        </member>
+        <member name="M:MyAPI.Controllers.MeetingController.Post(System.Int32)">
+            <summary>
+            生成邀请码
+            </summary>
+            <param name="meetingId">会议id</param>
+            <returns>返回id为meetingid有邀请码的meeting</returns>
+            <response code="200">创建成功并返回</response>
+            <response code="500">服务器内部错误</response>
+        </member>
+        <member name="M:MyAPI.Controllers.MeetingController.AnalysisInviteCode(System.String)">
+            <summary>
+            解析邀请码，返回会议信息
+            </summary>
+            <param name="InviteCode">邀请码</param>
+            <returns>返回会议信息</returns>
+            <response code="200">解析成功返回meeting对象</response>
+            <response code="400">传递邀请码错误</response>
+            <response code="500">服务器内部错误</response>
+        </member>
+        <member name="M:MyAPI.Controllers.User_MeetingController.GetJoinList(System.String)">
+            <summary>
+            获取报名参加会议的列表
+            </summary>
+            <param name="userId">用户id</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyAPI.Controllers.User_MeetingController.GetTodayMeetingList">
+            <summary>
+            查询会议时间为今天，参与者id为当前用户的会议
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyAPI.Controllers.User_MeetingController.GetDetails(System.Int32)">
+            <summary>
+            根据中间表id查询有关的所有信息
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyAPI.Controllers.User_MeetingController.GetPersonList(System.Int32)">
+            <summary>
+            获取参会人员名单
+            </summary>
+            <param name="meetingId">会议id</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyAPI.Controllers.User_MeetingController.Post(Infrastructure.Dto.User_MeetingInputDto)">
+            <summary>
+            解析邀请码,添加一条会议记录
+            </summary>
+            <param name="inputDto"></param>
+            <returns></returns>
+            <response code="200">创建成功</response>
+            <response code="400">邀请码无效，获取参会信息已经存在</response>
+            <response code="500">程序内部错误</response>
+        </member>
+        <member name="M:MyAPI.Controllers.User_MeetingController.Del(System.Int32)">
+            <summary>
+            根据id删除一条参会记录,作用于取消参会
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyAPI.Controllers.User_MeetingController.Patch(System.Int32,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{Infrastructure.Dto.User_MeetingInputDto})">
+            <summary>
+            局部更新中间表，作用于会议签到
+            </summary>
+            <param name="meetingId">会议id</param>
+            <param name="document">更新补丁</param>
+            <returns code="400">补丁数据错误</returns>
+            <returns code="204">修改成功</returns>
+        </member>
+    </members>
+</doc>

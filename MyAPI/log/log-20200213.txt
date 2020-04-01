@@ -1,0 +1,835 @@
+2020-02-13 13:00:55.158 +08:00 [DBG] 程序启动
+2020-02-13 13:01:00.776 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-13 13:01:01.725 +08:00 [INF] Now listening on: http://localhost:5000
+2020-02-13 13:01:01.726 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-02-13 13:01:01.727 +08:00 [INF] Hosting environment: Development
+2020-02-13 13:01:01.729 +08:00 [INF] Content root path: E:\SandTablePriject\.net core3.1\MyAPI\MyAPI
+2020-02-13 13:16:25.121 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-02-13 13:16:26.216 +08:00 [INF] Successfully validated the token.
+2020-02-13 13:16:26.224 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-02-13 13:16:26.279 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-02-13 13:16:28.418 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-02-13 13:16:29.441 +08:00 [INF] Executed DbCommand (123ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-02-13 13:16:29.639 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-02-13 13:16:29.688 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 3398.078ms
+2020-02-13 13:16:29.697 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-02-13 13:16:29.708 +08:00 [INF] Request finished in 4591.1067ms 200 application/json; charset=utf-8
+2020-02-13 13:16:36.673 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting/7  
+2020-02-13 13:16:36.688 +08:00 [INF] Successfully validated the token.
+2020-02-13 13:16:36.690 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-02-13 13:16:36.699 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-02-13 13:16:36.779 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-02-13 13:16:36.808 +08:00 [INF] Executed DbCommand (8ms) [Parameters=[@__meetingId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[Id] = @__meetingId_0
+2020-02-13 13:16:36.834 +08:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__userId_0
+2020-02-13 13:16:36.892 +08:00 [INF] Executing ObjectResult, writing value of type 'Infrastructure.Dto.MeetingOutputDto'.
+2020-02-13 13:16:36.895 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 193.9443ms
+2020-02-13 13:16:36.898 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-02-13 13:16:36.901 +08:00 [INF] Request finished in 228.4154ms 200 application/json; charset=utf-8
+2020-02-13 13:19:40.716 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-02-13 13:19:40.746 +08:00 [INF] Successfully validated the token.
+2020-02-13 13:19:40.751 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-02-13 13:19:40.753 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-02-13 13:19:40.776 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-02-13 13:19:40.803 +08:00 [INF] Executed DbCommand (13ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-02-13 13:19:40.808 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-02-13 13:19:40.810 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 54.5166ms
+2020-02-13 13:19:40.820 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-02-13 13:19:40.822 +08:00 [INF] Request finished in 106.4271ms 200 application/json; charset=utf-8
+2020-02-13 13:19:42.588 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting/7  
+2020-02-13 13:19:42.600 +08:00 [INF] Successfully validated the token.
+2020-02-13 13:19:42.602 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-02-13 13:19:42.608 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-02-13 13:19:42.615 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-02-13 13:19:42.628 +08:00 [INF] Executed DbCommand (4ms) [Parameters=[@__meetingId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[Id] = @__meetingId_0
+2020-02-13 13:19:42.639 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__userId_0
+2020-02-13 13:19:42.646 +08:00 [INF] Executing ObjectResult, writing value of type 'Infrastructure.Dto.MeetingOutputDto'.
+2020-02-13 13:19:42.649 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 37.6705ms
+2020-02-13 13:19:42.651 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-02-13 13:19:42.653 +08:00 [INF] Request finished in 65.5411ms 200 application/json; charset=utf-8
+2020-02-13 13:22:42.364 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-02-13 13:22:42.379 +08:00 [INF] Successfully validated the token.
+2020-02-13 13:22:42.408 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-02-13 13:22:42.411 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-02-13 13:22:42.432 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-02-13 13:22:42.457 +08:00 [INF] Executed DbCommand (8ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-02-13 13:22:42.474 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-02-13 13:22:42.483 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 56.9713ms
+2020-02-13 13:22:42.505 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-02-13 13:22:42.507 +08:00 [INF] Request finished in 143.2549ms 200 application/json; charset=utf-8
+2020-02-13 13:22:45.341 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting/7  
+2020-02-13 13:22:45.347 +08:00 [INF] Successfully validated the token.
+2020-02-13 13:22:45.348 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-02-13 13:22:45.350 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-02-13 13:22:45.359 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-02-13 13:22:45.366 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[@__meetingId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[Id] = @__meetingId_0
+2020-02-13 13:22:45.377 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__userId_0
+2020-02-13 13:22:45.382 +08:00 [INF] Executing ObjectResult, writing value of type 'Infrastructure.Dto.MeetingOutputDto'.
+2020-02-13 13:22:45.384 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 28.9267ms
+2020-02-13 13:22:45.387 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-02-13 13:22:45.390 +08:00 [INF] Request finished in 48.6257ms 200 application/json; charset=utf-8
+2020-02-13 13:28:01.082 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-02-13 13:28:01.094 +08:00 [INF] Successfully validated the token.
+2020-02-13 13:28:01.096 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-02-13 13:28:01.100 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-02-13 13:28:01.110 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-02-13 13:28:01.194 +08:00 [INF] Executed DbCommand (13ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-02-13 13:28:01.215 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-02-13 13:28:01.221 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 115.2086ms
+2020-02-13 13:28:01.229 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-02-13 13:28:01.233 +08:00 [INF] Request finished in 152.0059ms 200 application/json; charset=utf-8
+2020-02-13 13:28:02.466 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting/7  
+2020-02-13 13:28:02.477 +08:00 [INF] Successfully validated the token.
+2020-02-13 13:28:02.483 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-02-13 13:28:02.487 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-02-13 13:28:02.494 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-02-13 13:28:02.512 +08:00 [INF] Executed DbCommand (8ms) [Parameters=[@__meetingId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[Id] = @__meetingId_0
+2020-02-13 13:28:02.520 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__userId_0
+2020-02-13 13:28:02.527 +08:00 [INF] Executing ObjectResult, writing value of type 'Infrastructure.Dto.MeetingOutputDto'.
+2020-02-13 13:28:02.530 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 39.279ms
+2020-02-13 13:28:02.536 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-02-13 13:28:02.538 +08:00 [INF] Request finished in 71.0867ms 200 application/json; charset=utf-8
+2020-02-13 13:28:11.759 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-02-13 13:28:11.768 +08:00 [INF] Successfully validated the token.
+2020-02-13 13:28:11.770 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-02-13 13:28:11.773 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-02-13 13:28:11.784 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-02-13 13:28:11.798 +08:00 [INF] Executed DbCommand (9ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-02-13 13:28:11.803 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-02-13 13:28:11.805 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 25.5531ms
+2020-02-13 13:28:11.808 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-02-13 13:28:11.815 +08:00 [INF] Request finished in 55.9985ms 200 application/json; charset=utf-8
+2020-02-13 13:28:13.264 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting/26  
+2020-02-13 13:28:13.267 +08:00 [INF] Successfully validated the token.
+2020-02-13 13:28:13.269 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-02-13 13:28:13.270 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-02-13 13:28:13.276 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-02-13 13:28:13.284 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[@__meetingId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[Id] = @__meetingId_0
+2020-02-13 13:28:13.295 +08:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__userId_0
+2020-02-13 13:28:13.302 +08:00 [INF] Executing ObjectResult, writing value of type 'Infrastructure.Dto.MeetingOutputDto'.
+2020-02-13 13:28:13.304 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 31.6338ms
+2020-02-13 13:28:13.316 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-02-13 13:28:13.327 +08:00 [INF] Request finished in 63.107ms 200 application/json; charset=utf-8
+2020-02-13 13:28:15.238 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-02-13 13:28:15.243 +08:00 [INF] Successfully validated the token.
+2020-02-13 13:28:15.244 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-02-13 13:28:15.246 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-02-13 13:28:15.252 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-02-13 13:28:15.258 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-02-13 13:28:15.269 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-02-13 13:28:15.273 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 23.7718ms
+2020-02-13 13:28:15.295 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-02-13 13:28:15.298 +08:00 [INF] Request finished in 60.0561ms 200 application/json; charset=utf-8
+2020-02-13 13:39:45.832 +08:00 [DBG] 程序启动
+2020-02-13 13:39:48.123 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-13 13:39:48.745 +08:00 [INF] Now listening on: http://localhost:5000
+2020-02-13 13:39:48.750 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-02-13 13:39:48.752 +08:00 [INF] Hosting environment: Development
+2020-02-13 13:39:48.754 +08:00 [INF] Content root path: E:\SandTablePriject\.net core3.1\MyAPI\MyAPI
+2020-02-13 13:40:11.320 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-02-13 13:40:12.268 +08:00 [INF] Successfully validated the token.
+2020-02-13 13:40:12.277 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-02-13 13:40:12.362 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-02-13 13:40:14.022 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-02-13 13:40:14.815 +08:00 [INF] Executed DbCommand (89ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-02-13 13:40:14.987 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-02-13 13:40:15.032 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 2658.2507ms
+2020-02-13 13:40:15.049 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-02-13 13:40:15.062 +08:00 [INF] Request finished in 3748.5388ms 200 application/json; charset=utf-8
+2020-02-13 13:40:17.903 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting/31  
+2020-02-13 13:40:17.910 +08:00 [INF] Successfully validated the token.
+2020-02-13 13:40:17.912 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-02-13 13:40:17.920 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-02-13 13:40:17.974 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-02-13 13:40:18.000 +08:00 [INF] Executed DbCommand (7ms) [Parameters=[@__meetingId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[Id] = @__meetingId_0
+2020-02-13 13:40:18.017 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__userId_0
+2020-02-13 13:40:18.074 +08:00 [INF] Executing ObjectResult, writing value of type 'Infrastructure.Dto.MeetingOutputDto'.
+2020-02-13 13:40:18.077 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 151.5579ms
+2020-02-13 13:40:18.079 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-02-13 13:40:18.082 +08:00 [INF] Request finished in 179.3417ms 200 application/json; charset=utf-8
+2020-02-13 13:40:19.309 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/Meeting/31/createInviteCode application/json 2
+2020-02-13 13:40:19.316 +08:00 [INF] CORS policy execution failed.
+2020-02-13 13:40:19.317 +08:00 [INF] Request origin http://localhost:4200 does not have permission to access the resource.
+2020-02-13 13:40:19.325 +08:00 [INF] Successfully validated the token.
+2020-02-13 13:40:19.326 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Post (MyAPI)'
+2020-02-13 13:40:19.334 +08:00 [INF] Route matched with {action = "Post", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Int32) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-02-13 13:40:19.359 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-02-13 13:40:19.375 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[@__meetingId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[Id] = @__meetingId_0
+2020-02-13 13:40:19.614 +08:00 [INF] Executed DbCommand (34ms) [Parameters=[@p7='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Meeting] SET [Address] = @p0, [Content] = @p1, [DateTime] = @p2, [InviteCode] = @p3, [MeetingName] = @p4, [MeetingStats] = @p5, [UserId] = @p6
+WHERE [Id] = @p7;
+SELECT @@ROWCOUNT;
+2020-02-13 13:40:19.651 +08:00 [INF] Executing ObjectResult, writing value of type 'Infrastructure.Dto.MeetingOutputDto'.
+2020-02-13 13:40:19.654 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Post (MyAPI) in 316.8635ms
+2020-02-13 13:40:19.656 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Post (MyAPI)'
+2020-02-13 13:40:19.660 +08:00 [INF] Request finished in 350.837ms 200 application/json; charset=utf-8
+2020-02-13 13:40:26.045 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting/analysisInviteCode?inviteCode=mED5vKIY7ecahzqkUomV2gH1nvjxPhBfQjSMcPTC%252FVwBQ9tj7mawzf%252BfaZF2gBUe  
+2020-02-13 13:40:26.051 +08:00 [INF] Successfully validated the token.
+2020-02-13 13:40:26.052 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.AnalysisInviteCode (MyAPI)'
+2020-02-13 13:40:26.061 +08:00 [INF] Route matched with {action = "AnalysisInviteCode", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AnalysisInviteCode(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-02-13 13:40:26.086 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-02-13 13:40:26.094 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[@__meetingId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[Id] = @__meetingId_0
+2020-02-13 13:40:26.098 +08:00 [INF] Executing ObjectResult, writing value of type 'Infrastructure.Dto.MeetingOutputDto'.
+2020-02-13 13:40:26.100 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.AnalysisInviteCode (MyAPI) in 35.8437ms
+2020-02-13 13:40:26.107 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.AnalysisInviteCode (MyAPI)'
+2020-02-13 13:40:26.109 +08:00 [INF] Request finished in 63.741ms 200 application/json; charset=utf-8
+2020-02-13 13:40:27.525 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/User_Meeting application/json 155
+2020-02-13 13:40:27.527 +08:00 [INF] CORS policy execution failed.
+2020-02-13 13:40:27.529 +08:00 [INF] Request origin http://localhost:4200 does not have permission to access the resource.
+2020-02-13 13:40:27.533 +08:00 [INF] Successfully validated the token.
+2020-02-13 13:40:27.535 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.Post (MyAPI)'
+2020-02-13 13:40:27.547 +08:00 [INF] Route matched with {action = "Post", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Infrastructure.Dto.User_MeetingInputDto) on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-02-13 13:40:31.899 +08:00 [DBG] 开始添加一条中间表信息
+2020-02-13 13:40:31.907 +08:00 [DBG] 判断是否存在此条记录
+2020-02-13 13:40:31.912 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-02-13 13:40:31.950 +08:00 [INF] Executed DbCommand (7ms) [Parameters=[@__user_Meeting_UserId_0='?' (Size = 450), @__user_Meeting_MeetingId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [User_Meeting] AS [u]
+        WHERE ([u].[UserId] = @__user_Meeting_UserId_0) AND ([u].[MeetingId] = @__user_Meeting_MeetingId_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2020-02-13 13:40:31.957 +08:00 [DBG] 添加了一条参会记录数据
+2020-02-13 13:40:32.063 +08:00 [INF] Executed DbCommand (11ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (Size = 450), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [User_Meeting] ([CheckInDate], [MeetingId], [RegistrationDate], [UserId], [User_MeetingStats])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [Id]
+FROM [User_Meeting]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2020-02-13 13:40:32.116 +08:00 [INF] Executing ObjectResult, writing value of type 'Infrastructure.Dto.User_MeetingOutputDto'.
+2020-02-13 13:40:32.125 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.Post (MyAPI) in 4573.74ms
+2020-02-13 13:40:32.127 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.Post (MyAPI)'
+2020-02-13 13:40:32.129 +08:00 [INF] Request finished in 4605.0061ms 201 application/json; charset=utf-8
+2020-02-13 13:41:03.880 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-02-13 13:41:03.891 +08:00 [INF] Successfully validated the token.
+2020-02-13 13:41:03.893 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-02-13 13:41:03.895 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-02-13 13:41:03.901 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-02-13 13:41:03.913 +08:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-02-13 13:41:03.923 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-02-13 13:41:03.926 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 27.8631ms
+2020-02-13 13:41:03.929 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-02-13 13:41:03.932 +08:00 [INF] Request finished in 51.4173ms 200 application/json; charset=utf-8
+2020-02-13 16:21:32.108 +08:00 [DBG] 程序启动
+2020-02-13 16:21:34.437 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-13 16:21:34.847 +08:00 [INF] Now listening on: http://localhost:5000
+2020-02-13 16:21:34.871 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-02-13 16:21:34.873 +08:00 [INF] Hosting environment: Development
+2020-02-13 16:21:34.874 +08:00 [INF] Content root path: E:\SandTablePriject\.net core3.1\MyAPI\MyAPI
+2020-02-13 16:29:50.629 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/User_Meeting  
+2020-02-13 16:29:51.005 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+MyAPI.Controllers.User_MeetingController.Get (MyAPI)
+MyAPI.Controllers.User_MeetingController.Get (MyAPI)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.Select(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.Matching.DataSourceDependentMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context, ICorsPolicyProvider corsPolicyProvider)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass4_1.<UseMiddleware>b__2(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-02-13 16:29:51.196 +08:00 [INF] Request finished in 572.962ms 500 text/plain
+2020-02-13 16:32:02.703 +08:00 [DBG] 程序启动
+2020-02-13 16:32:04.630 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-13 16:32:05.333 +08:00 [INF] Now listening on: http://localhost:5000
+2020-02-13 16:32:05.337 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-02-13 16:32:05.339 +08:00 [INF] Hosting environment: Development
+2020-02-13 16:32:05.340 +08:00 [INF] Content root path: E:\SandTablePriject\.net core3.1\MyAPI\MyAPI
+2020-02-13 16:32:27.261 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/User_Meeting  
+2020-02-13 16:32:27.392 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+MyAPI.Controllers.User_MeetingController.Get (MyAPI)
+MyAPI.Controllers.User_MeetingController.Get (MyAPI)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.Select(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.Matching.DataSourceDependentMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context, ICorsPolicyProvider corsPolicyProvider)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass4_1.<UseMiddleware>b__2(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-02-13 16:32:27.471 +08:00 [INF] Request finished in 221.084ms 500 text/plain
+2020-02-13 16:33:54.267 +08:00 [DBG] 程序启动
+2020-02-13 16:33:58.086 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-13 16:33:58.773 +08:00 [INF] Now listening on: http://localhost:5000
+2020-02-13 16:33:58.776 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-02-13 16:33:58.787 +08:00 [INF] Hosting environment: Development
+2020-02-13 16:33:58.788 +08:00 [INF] Content root path: E:\SandTablePriject\.net core3.1\MyAPI\MyAPI
+2020-02-13 16:34:16.671 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/User_Meeting/xxx  
+2020-02-13 16:34:17.673 +08:00 [INF] Successfully validated the token.
+2020-02-13 16:34:17.681 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-02-13 16:34:17.731 +08:00 [INF] Route matched with {action = "Get", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-02-13 16:34:49.446 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-02-13 16:34:51.782 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.Get (MyAPI) in 34038.7853ms
+2020-02-13 16:34:51.800 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-02-13 16:34:51.810 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The LINQ expression 'DbSet<User_Meeting>
+    .Join(
+        outer: DbSet<Meeting>, 
+        inner: u => EF.Property<Nullable<int>>(u, "MeetingId"), 
+        outerKeySelector: m => EF.Property<Nullable<int>>(m, "Id"), 
+        innerKeySelector: (o, i) => new TransparentIdentifier<User_Meeting, Meeting>(
+            Outer = o, 
+            Inner = i
+        ))
+    .Where(u => u.Outer.UserId == __userId_0 && (u.Inner.DateTime - __dateTime_1).Days == 0)' could not be translated. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to either AsEnumerable(), AsAsyncEnumerable(), ToList(), or ToListAsync(). See https://go.microsoft.com/fwlink/?linkid=2101038 for more information.
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.<VisitMethodCall>g__CheckTranslated|8_0(ShapedQueryExpression translated, <>c__DisplayClass8_0& )
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQueryCore[TFunc](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Infrastructure.Repository.User_MeetingRepository.GetUser_meetings(String userId, DateTime dateTime) in E:\SandTablePriject\.net core3.1\MyAPI\Infrastructure\Repository\User_MeetingRepository.cs:line 65
+   at MyAPI.Controllers.User_MeetingController.Get() in E:\SandTablePriject\.net core3.1\MyAPI\MyAPI\Controllers\User_MeetingController.cs:line 58
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-02-13 16:34:52.096 +08:00 [INF] Request finished in 35436.1793ms 500 text/plain
+2020-02-13 16:36:53.515 +08:00 [DBG] 程序启动
+2020-02-13 16:36:55.374 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-13 16:36:55.813 +08:00 [INF] Now listening on: http://localhost:5000
+2020-02-13 16:36:55.840 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-02-13 16:36:55.841 +08:00 [INF] Hosting environment: Development
+2020-02-13 16:36:55.842 +08:00 [INF] Content root path: E:\SandTablePriject\.net core3.1\MyAPI\MyAPI
+2020-02-13 16:37:18.940 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/User_Meeting/xxx  
+2020-02-13 16:37:19.806 +08:00 [INF] Successfully validated the token.
+2020-02-13 16:37:19.816 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-02-13 16:37:19.901 +08:00 [INF] Route matched with {action = "Get", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-02-13 16:37:48.712 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-02-13 16:37:52.521 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.Get (MyAPI) in 32595.3102ms
+2020-02-13 16:37:52.536 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-02-13 16:37:52.545 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The LINQ expression 'DbSet<User_Meeting>
+    .Join(
+        outer: DbSet<Meeting>, 
+        inner: u => EF.Property<Nullable<int>>(u, "MeetingId"), 
+        outerKeySelector: m => EF.Property<Nullable<int>>(m, "Id"), 
+        innerKeySelector: (o, i) => new TransparentIdentifier<User_Meeting, Meeting>(
+            Outer = o, 
+            Inner = i
+        ))
+    .Where(u => u.Outer.UserId == __userId_0 && (u.Inner.DateTime - __dateTime_1).Days == 0)' could not be translated. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to either AsEnumerable(), AsAsyncEnumerable(), ToList(), or ToListAsync(). See https://go.microsoft.com/fwlink/?linkid=2101038 for more information.
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.<VisitMethodCall>g__CheckTranslated|8_0(ShapedQueryExpression translated, <>c__DisplayClass8_0& )
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQueryCore[TFunc](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Infrastructure.Repository.User_MeetingRepository.GetUser_meetings(String userId, DateTime dateTime) in E:\SandTablePriject\.net core3.1\MyAPI\Infrastructure\Repository\User_MeetingRepository.cs:line 65
+   at MyAPI.Controllers.User_MeetingController.Get() in E:\SandTablePriject\.net core3.1\MyAPI\MyAPI\Controllers\User_MeetingController.cs:line 58
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-02-13 16:37:52.681 +08:00 [INF] Request finished in 33748.8311ms 500 text/plain
+2020-02-13 16:38:13.977 +08:00 [INF] Application is shutting down...
+2020-02-13 16:39:48.178 +08:00 [DBG] 程序启动
+2020-02-13 16:39:49.642 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-13 16:39:50.312 +08:00 [INF] Now listening on: http://localhost:5000
+2020-02-13 16:39:50.358 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-02-13 16:39:50.359 +08:00 [INF] Hosting environment: Development
+2020-02-13 16:39:50.360 +08:00 [INF] Content root path: E:\SandTablePriject\.net core3.1\MyAPI\MyAPI
+2020-02-13 16:40:38.099 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/User_Meeting/xxx  
+2020-02-13 16:40:38.972 +08:00 [INF] Successfully validated the token.
+2020-02-13 16:40:38.980 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-02-13 16:40:39.026 +08:00 [INF] Route matched with {action = "Get", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-02-13 16:40:42.920 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-02-13 16:40:43.523 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.Get (MyAPI) in 4486.6478ms
+2020-02-13 16:40:43.537 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-02-13 16:40:43.546 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The LINQ expression 'DbSet<User_Meeting>
+    .Join(
+        outer: DbSet<Meeting>, 
+        inner: u => EF.Property<Nullable<int>>(u, "MeetingId"), 
+        outerKeySelector: m => EF.Property<Nullable<int>>(m, "Id"), 
+        innerKeySelector: (o, i) => new TransparentIdentifier<User_Meeting, Meeting>(
+            Outer = o, 
+            Inner = i
+        ))
+    .Where(u => u.Outer.UserId == __userId_0 && (u.Inner.DateTime - __dateTime_1).Days == 0)' could not be translated. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to either AsEnumerable(), AsAsyncEnumerable(), ToList(), or ToListAsync(). See https://go.microsoft.com/fwlink/?linkid=2101038 for more information.
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.<VisitMethodCall>g__CheckTranslated|8_0(ShapedQueryExpression translated, <>c__DisplayClass8_0& )
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQueryCore[TFunc](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.IncludableQueryable`2.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Infrastructure.Repository.User_MeetingRepository.GetUser_meetings(String userId, DateTime dateTime) in E:\SandTablePriject\.net core3.1\MyAPI\Infrastructure\Repository\User_MeetingRepository.cs:line 65
+   at MyAPI.Controllers.User_MeetingController.Get() in E:\SandTablePriject\.net core3.1\MyAPI\MyAPI\Controllers\User_MeetingController.cs:line 58
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-02-13 16:40:43.705 +08:00 [INF] Request finished in 5613.8472ms 500 text/plain
+2020-02-13 16:53:52.747 +08:00 [DBG] 程序启动
+2020-02-13 16:53:54.391 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-13 16:53:54.917 +08:00 [INF] Now listening on: http://localhost:5000
+2020-02-13 16:53:54.922 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-02-13 16:53:54.922 +08:00 [INF] Hosting environment: Development
+2020-02-13 16:53:54.923 +08:00 [INF] Content root path: E:\SandTablePriject\.net core3.1\MyAPI\MyAPI
+2020-02-13 16:53:59.751 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-02-13 16:54:00.332 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/User_Meeting/xxx  
+2020-02-13 16:54:00.934 +08:00 [INF] Successfully validated the token.
+2020-02-13 16:54:00.934 +08:00 [INF] Successfully validated the token.
+2020-02-13 16:54:00.944 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-02-13 16:54:00.944 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-02-13 16:54:00.992 +08:00 [INF] Route matched with {action = "Get", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-02-13 16:54:00.993 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-02-13 16:54:06.588 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-02-13 16:54:06.588 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-02-13 16:54:07.633 +08:00 [INF] Executed DbCommand (111ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-02-13 16:54:07.633 +08:00 [INF] Executed DbCommand (111ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[CheckInDate], [u].[MeetingId], [u].[RegistrationDate], [u].[UserId], [u].[User_MeetingStats], [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [User_Meeting] AS [u]
+INNER JOIN [Meeting] AS [m] ON [u].[MeetingId] = [m].[Id]
+WHERE [u].[UserId] = @__userId_0
+2020-02-13 16:54:16.295 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Core.Entity.User_Meeting, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-02-13 16:54:16.308 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-02-13 16:54:16.362 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 15351.9216ms
+2020-02-13 16:54:16.362 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.Get (MyAPI) in 15354.2806ms
+2020-02-13 16:54:16.371 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-02-13 16:54:16.371 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-02-13 16:54:16.385 +08:00 [INF] Request finished in 16636.8526ms 200 application/json; charset=utf-8
+2020-02-13 16:54:16.385 +08:00 [INF] Request finished in 16051.4115ms 200 application/json; charset=utf-8
+2020-02-13 17:08:51.086 +08:00 [DBG] 程序启动
+2020-02-13 17:08:53.019 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-13 17:08:53.603 +08:00 [INF] Now listening on: http://localhost:5000
+2020-02-13 17:08:53.605 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-02-13 17:08:53.606 +08:00 [INF] Hosting environment: Development
+2020-02-13 17:08:53.607 +08:00 [INF] Content root path: E:\SandTablePriject\.net core3.1\MyAPI\MyAPI
+2020-02-13 17:09:08.044 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-02-13 17:09:08.364 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/User_Meeting/xxx  
+2020-02-13 17:09:08.764 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]', Current time: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2020-02-13 17:09:08.764 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]', Current time: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2020-02-13 17:09:08.861 +08:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]', Current time: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2020-02-13 17:09:08.861 +08:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]', Current time: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2020-02-13 17:09:08.867 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-02-13 17:09:08.867 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-02-13 17:09:08.911 +08:00 [INF] Route matched with {action = "Get", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-02-13 17:09:08.914 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-02-13 17:09:12.445 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-02-13 17:09:12.445 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-02-13 17:09:13.284 +08:00 [INF] Executed DbCommand (49ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[CheckInDate], [u].[MeetingId], [u].[RegistrationDate], [u].[UserId], [u].[User_MeetingStats], [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [User_Meeting] AS [u]
+INNER JOIN [Meeting] AS [m] ON [u].[MeetingId] = [m].[Id]
+WHERE CAST(0 AS bit) = CAST(1 AS bit)
+2020-02-13 17:09:13.307 +08:00 [INF] Executed DbCommand (79ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-02-13 17:09:18.370 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Core.Entity.User_Meeting, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-02-13 17:09:18.411 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.Get (MyAPI) in 9483.795ms
+2020-02-13 17:09:18.417 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-02-13 17:09:18.439 +08:00 [INF] Request finished in 10074.5235ms 200 application/json; charset=utf-8
+2020-02-13 17:09:18.588 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-02-13 17:09:18.615 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 9695.8407ms
+2020-02-13 17:09:18.618 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-02-13 17:09:18.620 +08:00 [INF] Request finished in 10580.6232ms 200 application/json; charset=utf-8
+2020-02-13 17:10:05.490 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-02-13 17:10:05.503 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]', Current time: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2020-02-13 17:10:05.511 +08:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]', Current time: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2020-02-13 17:10:05.513 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-02-13 17:10:05.526 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-02-13 17:10:05.600 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-02-13 17:10:05.620 +08:00 [INF] Executed DbCommand (8ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-02-13 17:10:05.773 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/User_Meeting/xxx  
+2020-02-13 17:10:13.937 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]', Current time: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2020-02-13 17:10:40.008 +08:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]', Current time: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2020-02-13 17:10:40.009 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-02-13 17:10:40.010 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-02-13 17:10:42.176 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 36645.6563ms
+2020-02-13 17:10:42.200 +08:00 [INF] Route matched with {action = "Get", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-02-13 17:10:42.201 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-02-13 17:11:04.190 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-02-13 17:11:04.216 +08:00 [INF] Request finished in 58726.0433ms 200 application/json; charset=utf-8
+2020-02-13 17:11:04.224 +08:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[CheckInDate], [u].[MeetingId], [u].[RegistrationDate], [u].[UserId], [u].[User_MeetingStats], [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [User_Meeting] AS [u]
+INNER JOIN [Meeting] AS [m] ON [u].[MeetingId] = [m].[Id]
+WHERE CAST(0 AS bit) = CAST(1 AS bit)
+2020-02-13 17:11:04.233 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Core.Entity.User_Meeting, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-02-13 17:11:04.237 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.Get (MyAPI) in 22032.5487ms
+2020-02-13 17:11:04.248 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-02-13 17:11:04.250 +08:00 [INF] Request finished in 58476.9157ms 200 application/json; charset=utf-8
+2020-02-13 17:11:13.501 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-02-13 17:11:13.511 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]', Current time: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2020-02-13 17:11:13.521 +08:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]', Current time: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2020-02-13 17:11:13.524 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-02-13 17:11:13.528 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-02-13 17:11:13.537 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-02-13 17:11:13.548 +08:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-02-13 17:11:13.555 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-02-13 17:11:13.560 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 25.7305ms
+2020-02-13 17:11:13.569 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-02-13 17:11:13.571 +08:00 [INF] Request finished in 70.4586ms 200 application/json; charset=utf-8
+2020-02-13 17:11:13.896 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/User_Meeting/xxx  
+2020-02-13 17:11:13.900 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]', Current time: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2020-02-13 17:11:13.913 +08:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]', Current time: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2020-02-13 17:11:13.916 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-02-13 17:11:13.920 +08:00 [INF] Route matched with {action = "Get", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-02-13 17:11:16.769 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-02-13 17:11:16.776 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[CheckInDate], [u].[MeetingId], [u].[RegistrationDate], [u].[UserId], [u].[User_MeetingStats], [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [User_Meeting] AS [u]
+INNER JOIN [Meeting] AS [m] ON [u].[MeetingId] = [m].[Id]
+WHERE CAST(0 AS bit) = CAST(1 AS bit)
+2020-02-13 17:11:42.566 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Core.Entity.User_Meeting, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-02-13 17:11:42.572 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.Get (MyAPI) in 28646.6795ms
+2020-02-13 17:11:42.579 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-02-13 17:11:42.583 +08:00 [INF] Request finished in 28687.3597ms 200 application/json; charset=utf-8
+2020-02-13 17:11:45.187 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-02-13 17:11:45.203 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]', Current time: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2020-02-13 17:11:45.214 +08:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]', Current time: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2020-02-13 17:11:45.218 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-02-13 17:11:45.221 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-02-13 17:11:45.231 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-02-13 17:11:45.258 +08:00 [INF] Executed DbCommand (16ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-02-13 17:11:45.270 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-02-13 17:11:45.276 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 49.141ms
+2020-02-13 17:11:45.286 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-02-13 17:11:45.289 +08:00 [INF] Request finished in 102.5065ms 200 application/json; charset=utf-8
+2020-02-13 17:11:45.432 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/User_Meeting/xxx  
+2020-02-13 17:11:45.437 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]', Current time: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2020-02-13 17:11:45.447 +08:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]', Current time: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2020-02-13 17:11:45.449 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-02-13 17:11:45.451 +08:00 [INF] Route matched with {action = "Get", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-02-13 17:11:51.021 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-02-13 17:11:51.062 +08:00 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[CheckInDate], [u].[MeetingId], [u].[RegistrationDate], [u].[UserId], [u].[User_MeetingStats], [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [User_Meeting] AS [u]
+INNER JOIN [Meeting] AS [m] ON [u].[MeetingId] = [m].[Id]
+WHERE CAST(0 AS bit) = CAST(1 AS bit)
+2020-02-13 17:12:01.876 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Core.Entity.User_Meeting, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-02-13 17:12:01.878 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.Get (MyAPI) in 16417.4119ms
+2020-02-13 17:12:01.880 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-02-13 17:12:01.887 +08:00 [INF] Request finished in 16454.149ms 200 application/json; charset=utf-8
+2020-02-13 17:13:03.592 +08:00 [DBG] 程序启动
+2020-02-13 17:13:05.418 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-13 17:13:06.127 +08:00 [INF] Now listening on: http://localhost:5000
+2020-02-13 17:13:06.160 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-02-13 17:13:06.161 +08:00 [INF] Hosting environment: Development
+2020-02-13 17:13:06.162 +08:00 [INF] Content root path: E:\SandTablePriject\.net core3.1\MyAPI\MyAPI
+2020-02-13 17:13:14.090 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-02-13 17:13:14.726 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]', Current time: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2020-02-13 17:13:14.774 +08:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]', Current time: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2020-02-13 17:13:14.782 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-02-13 17:13:14.846 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-02-13 17:13:16.001 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-02-13 17:13:16.809 +08:00 [INF] Executed DbCommand (161ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-02-13 17:13:17.029 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-02-13 17:13:17.095 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 2236.6374ms
+2020-02-13 17:13:17.104 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-02-13 17:13:17.120 +08:00 [INF] Request finished in 3032.9797ms 200 application/json; charset=utf-8
+2020-02-13 17:13:18.335 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/User_Meeting/xxx  
+2020-02-13 17:13:18.343 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]', Current time: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2020-02-13 17:13:18.353 +08:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]', Current time: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2020-02-13 17:13:18.356 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-02-13 17:13:18.369 +08:00 [INF] Route matched with {action = "Get", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-02-13 17:13:27.830 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-02-13 17:13:27.938 +08:00 [INF] Executed DbCommand (31ms) [Parameters=[@__dateTime_1='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[CheckInDate], [u].[MeetingId], [u].[RegistrationDate], [u].[UserId], [u].[User_MeetingStats], [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [User_Meeting] AS [u]
+INNER JOIN [Meeting] AS [m] ON [u].[MeetingId] = [m].[Id]
+WHERE DATEDIFF(DAY, [m].[DateTime], @__dateTime_1) = 0
+2020-02-13 17:13:27.976 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Core.Entity.User_Meeting, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-02-13 17:13:28.000 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.Get (MyAPI) in 9624.3489ms
+2020-02-13 17:13:28.012 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-02-13 17:13:28.014 +08:00 [INF] Request finished in 9679.626ms 200 application/json; charset=utf-8
+2020-02-13 17:14:26.759 +08:00 [DBG] 程序启动
+2020-02-13 17:14:29.683 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-13 17:14:30.168 +08:00 [INF] Now listening on: http://localhost:5000
+2020-02-13 17:14:30.178 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-02-13 17:14:30.179 +08:00 [INF] Hosting environment: Development
+2020-02-13 17:14:30.180 +08:00 [INF] Content root path: E:\SandTablePriject\.net core3.1\MyAPI\MyAPI
+2020-02-13 17:14:34.915 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-02-13 17:14:35.127 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/User_Meeting/xxx  
+2020-02-13 17:14:35.685 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]', Current time: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2020-02-13 17:14:35.685 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]', Current time: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2020-02-13 17:14:35.730 +08:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]', Current time: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2020-02-13 17:14:35.730 +08:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]', Current time: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2020-02-13 17:14:35.737 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-02-13 17:14:35.737 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-02-13 17:14:35.779 +08:00 [INF] Route matched with {action = "Get", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-02-13 17:14:35.784 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-02-13 17:15:07.769 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-02-13 17:15:07.769 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-02-13 17:15:08.627 +08:00 [INF] Executed DbCommand (120ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-02-13 17:15:08.627 +08:00 [INF] Executed DbCommand (120ms) [Parameters=[@__dateTime_1='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[CheckInDate], [u].[MeetingId], [u].[RegistrationDate], [u].[UserId], [u].[User_MeetingStats], [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [User_Meeting] AS [u]
+INNER JOIN [Meeting] AS [m] ON [u].[MeetingId] = [m].[Id]
+WHERE DATEDIFF(DAY, [m].[DateTime], @__dateTime_1) = 0
+2020-02-13 17:15:08.817 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Core.Entity.User_Meeting, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-02-13 17:15:08.859 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-02-13 17:15:08.894 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 33099.0095ms
+2020-02-13 17:15:08.895 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.Get (MyAPI) in 33104.3576ms
+2020-02-13 17:15:08.908 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-02-13 17:15:08.908 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-02-13 17:15:08.926 +08:00 [INF] Request finished in 34016.2268ms 200 application/json; charset=utf-8
+2020-02-13 17:15:08.926 +08:00 [INF] Request finished in 33798.5425ms 200 application/json; charset=utf-8
+2020-02-13 17:15:37.887 +08:00 [DBG] 程序启动
+2020-02-13 17:15:39.490 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-13 17:15:39.896 +08:00 [INF] Now listening on: http://localhost:5000
+2020-02-13 17:15:39.898 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-02-13 17:15:39.899 +08:00 [INF] Hosting environment: Development
+2020-02-13 17:15:39.900 +08:00 [INF] Content root path: E:\SandTablePriject\.net core3.1\MyAPI\MyAPI
+2020-02-13 17:15:49.474 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/User_Meeting/xxx  
+2020-02-13 17:15:50.413 +08:00 [INF] Successfully validated the token.
+2020-02-13 17:15:50.419 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-02-13 17:15:50.458 +08:00 [INF] Route matched with {action = "Get", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-02-13 17:15:58.922 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-02-13 17:15:59.830 +08:00 [INF] Executed DbCommand (86ms) [Parameters=[@__userId_0='?' (Size = 450), @__dateTime_2='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[CheckInDate], [u].[MeetingId], [u].[RegistrationDate], [u].[UserId], [u].[User_MeetingStats], [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [User_Meeting] AS [u]
+INNER JOIN [Meeting] AS [m] ON [u].[MeetingId] = [m].[Id]
+WHERE ([u].[UserId] = @__userId_0) AND (DATEDIFF(DAY, [m].[DateTime], @__dateTime_2) = 0)
+2020-02-13 17:16:05.400 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Core.Entity.User_Meeting, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-02-13 17:16:07.673 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.Get (MyAPI) in 17203.4502ms
+2020-02-13 17:16:07.703 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-02-13 17:16:07.724 +08:00 [INF] Request finished in 18257.7055ms 200 application/json; charset=utf-8

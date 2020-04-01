@@ -1,0 +1,136 @@
+2020-02-19 15:48:56.920 +08:00 [DBG] 程序启动
+2020-02-19 15:48:57.834 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-19 15:48:58.239 +08:00 [INF] Now listening on: http://[::]:5000
+2020-02-19 15:48:58.313 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-02-19 15:48:58.316 +08:00 [INF] Hosting environment: Development
+2020-02-19 15:48:58.318 +08:00 [INF] Content root path: E:\SandTablePriject\.net core3.1\MyAPI\MyAPI
+2020-02-19 15:55:26.739 +08:00 [INF] Application is shutting down...
+2020-02-19 15:55:37.991 +08:00 [DBG] 程序启动
+2020-02-19 15:55:38.328 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-19 15:55:38.570 +08:00 [INF] Now listening on: http://[::]:5000
+2020-02-19 15:55:38.571 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-02-19 15:55:38.571 +08:00 [INF] Hosting environment: Development
+2020-02-19 15:55:38.572 +08:00 [INF] Content root path: E:\SandTablePriject\.net core3.1\MyAPI\MyAPI
+2020-02-19 15:56:13.598 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting/ceshi  
+2020-02-19 15:56:14.041 +08:00 [INF] Authorization failed.
+2020-02-19 15:56:14.048 +08:00 [INF] AuthenticationScheme: Bearer was challenged.
+2020-02-19 15:56:14.058 +08:00 [INF] Request finished in 463.9232ms 401 
+2020-02-19 15:59:32.776 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/User_Meeting/TodayUserMeeting  
+2020-02-19 15:59:33.383 +08:00 [INF] Successfully validated the token.
+2020-02-19 15:59:33.388 +08:00 [INF] Authorization was successful.
+2020-02-19 15:59:33.393 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.GetTodayMeetingList (MyAPI)'
+2020-02-19 15:59:33.435 +08:00 [INF] Route matched with {action = "GetTodayMeetingList", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTodayMeetingList() on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-02-19 15:59:35.151 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-02-19 15:59:35.703 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-02-19 15:59:35.711 +08:00 [INF] Successfully validated the token.
+2020-02-19 15:59:35.713 +08:00 [INF] Authorization was successful.
+2020-02-19 15:59:35.714 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-02-19 15:59:35.760 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-02-19 15:59:35.863 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-02-19 15:59:36.085 +08:00 [INF] Executed DbCommand (101ms) [Parameters=[@__userId_0='?' (Size = 450), @__dateTime_2='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[CheckInDate], [u].[MeetingId], [u].[RegistrationDate], [u].[UserId], [u].[User_MeetingStats], [m].[Id], [m].[Address], [m].[Content], [m].[CreaterId], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingState]
+FROM [User_Meeting] AS [u]
+INNER JOIN [Meeting] AS [m] ON [u].[MeetingId] = [m].[Id]
+WHERE ([u].[UserId] = @__userId_0) AND (DATEDIFF(DAY, [m].[DateTime], @__dateTime_2) = 0)
+2020-02-19 15:59:36.085 +08:00 [INF] Executed DbCommand (91ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[CreaterId], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingState]
+FROM [Meeting] AS [m]
+WHERE [m].[CreaterId] = @__userId_0
+2020-02-19 15:59:36.168 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.User_MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-02-19 15:59:36.198 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-02-19 15:59:36.211 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.GetTodayMeetingList (MyAPI) in 2761.5893ms
+2020-02-19 15:59:36.216 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.GetTodayMeetingList (MyAPI)'
+2020-02-19 15:59:36.223 +08:00 [INF] Request finished in 3447.5778ms 200 application/json; charset=utf-8
+2020-02-19 15:59:36.226 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 462.1866ms
+2020-02-19 15:59:36.230 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-02-19 15:59:36.233 +08:00 [INF] Request finished in 529.2622ms 200 application/json; charset=utf-8
+2020-02-19 15:59:38.419 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/User_Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-02-19 15:59:38.434 +08:00 [INF] Successfully validated the token.
+2020-02-19 15:59:38.437 +08:00 [INF] Authorization was successful.
+2020-02-19 15:59:38.439 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.GetJoinList (MyAPI)'
+2020-02-19 15:59:38.451 +08:00 [INF] Route matched with {action = "GetJoinList", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetJoinList(System.String) on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-02-19 15:59:38.476 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-02-19 15:59:38.501 +08:00 [INF] Executed DbCommand (10ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[CheckInDate], [u].[MeetingId], [u].[RegistrationDate], [u].[UserId], [u].[User_MeetingStats], [m].[Id], [m].[Address], [m].[Content], [m].[CreaterId], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingState]
+FROM [User_Meeting] AS [u]
+INNER JOIN [Meeting] AS [m] ON [u].[MeetingId] = [m].[Id]
+WHERE [u].[UserId] = @__userId_0
+2020-02-19 15:59:38.535 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.User_MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-02-19 15:59:38.547 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.GetJoinList (MyAPI) in 86.8034ms
+2020-02-19 15:59:38.549 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.GetJoinList (MyAPI)'
+2020-02-19 15:59:38.553 +08:00 [INF] Request finished in 133.3586ms 200 application/json; charset=utf-8
+2020-02-19 16:00:01.193 +08:00 [DBG] 程序启动
+2020-02-19 16:00:01.549 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-19 16:00:01.752 +08:00 [INF] Now listening on: http://[::]:5000
+2020-02-19 16:00:01.754 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-02-19 16:00:01.755 +08:00 [INF] Hosting environment: Development
+2020-02-19 16:00:01.756 +08:00 [INF] Content root path: E:\SandTablePriject\.net core3.1\MyAPI\MyAPI
+2020-02-19 16:00:06.667 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting/ceshi  
+2020-02-19 16:00:06.791 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.ceshi (MyAPI)'
+2020-02-19 16:00:06.815 +08:00 [INF] Route matched with {action = "ceshi", controller = "Meeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ceshi() on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-02-19 16:00:07.134 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`3[[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2020-02-19 16:00:07.256 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.ceshi (MyAPI) in 428.9573ms
+2020-02-19 16:00:07.264 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.ceshi (MyAPI)'
+2020-02-19 16:00:07.268 +08:00 [INF] Request finished in 604.1236ms 200 application/json; charset=utf-8
+2020-02-19 16:00:23.368 +08:00 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/api/Meeting/ceshi  
+2020-02-19 16:00:23.376 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.ceshi (MyAPI)'
+2020-02-19 16:00:23.379 +08:00 [INF] Route matched with {action = "ceshi", controller = "Meeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ceshi() on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-02-19 16:00:23.383 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`3[[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2020-02-19 16:00:23.387 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.ceshi (MyAPI) in 6.0089ms
+2020-02-19 16:00:23.392 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.ceshi (MyAPI)'
+2020-02-19 16:00:23.395 +08:00 [INF] Request finished in 27.232ms 200 application/json; charset=utf-8
+2020-02-19 16:00:46.139 +08:00 [INF] Request starting HTTP/1.1 GET http://172.17.3.1:5000/api/Meeting/ceshi  
+2020-02-19 16:00:46.145 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.ceshi (MyAPI)'
+2020-02-19 16:00:46.147 +08:00 [INF] Route matched with {action = "ceshi", controller = "Meeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ceshi() on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-02-19 16:00:46.159 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`3[[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2020-02-19 16:00:46.164 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.ceshi (MyAPI) in 14.179ms
+2020-02-19 16:00:46.168 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.ceshi (MyAPI)'
+2020-02-19 16:00:46.170 +08:00 [INF] Request finished in 32.2596ms 200 application/json; charset=utf-8
+2020-02-19 16:47:08.900 +08:00 [INF] Application is shutting down...
+2020-02-19 17:57:32.010 +08:00 [DBG] 程序启动
+2020-02-19 17:57:32.292 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-19 17:57:32.495 +08:00 [INF] Now listening on: http://[::]:5000
+2020-02-19 17:57:32.496 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-02-19 17:57:32.497 +08:00 [INF] Hosting environment: Development
+2020-02-19 17:57:32.499 +08:00 [INF] Content root path: E:\SandTablePriject\.net core3.1\MyAPI\MyAPI
+2020-02-19 17:58:06.263 +08:00 [INF] Request starting HTTP/1.1 GET http://172.17.3.1:5000/api/Meeting/ceshi  
+2020-02-19 17:58:06.455 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.ceshi (MyAPI)'
+2020-02-19 17:58:06.488 +08:00 [INF] Route matched with {action = "ceshi", controller = "Meeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ceshi() on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-02-19 17:58:07.206 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`3[[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2020-02-19 17:58:07.410 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.ceshi (MyAPI) in 913.1294ms
+2020-02-19 17:58:07.416 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.ceshi (MyAPI)'
+2020-02-19 17:58:07.420 +08:00 [INF] Request finished in 1163.6943ms 200 application/json; charset=utf-8
+2020-02-19 18:26:18.712 +08:00 [INF] Application is shutting down...
+2020-02-19 19:09:00.212 +08:00 [DBG] 程序启动
+2020-02-19 19:09:00.519 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-19 19:09:00.791 +08:00 [FTL] Unable to start Kestrel.
+System.Net.Sockets.SocketException (10013): 以一种访问权限不允许的方式做了一个访问套接字的尝试。
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.<>c__DisplayClass21_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.ListenOptions.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.AnyIPListenOptions.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(IServerAddressesFeature addresses, KestrelServerOptions serverOptions, ILogger logger, Func`2 createBinding)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+2020-02-19 19:10:48.565 +08:00 [DBG] 程序启动
+2020-02-19 19:10:48.818 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-19 19:10:49.015 +08:00 [INF] Now listening on: http://[::]:5000
+2020-02-19 19:10:49.016 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-02-19 19:10:49.018 +08:00 [INF] Hosting environment: Development
+2020-02-19 19:10:49.019 +08:00 [INF] Content root path: E:\SandTablePriject\.net core3.1\MyAPI\MyAPI
+2020-02-19 19:11:18.002 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting/ceshi  
+2020-02-19 19:11:18.131 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.ceshi (MyAPI)'
+2020-02-19 19:11:18.158 +08:00 [INF] Route matched with {action = "ceshi", controller = "Meeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ceshi() on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-02-19 19:11:18.580 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`3[[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2020-02-19 19:11:18.724 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.ceshi (MyAPI) in 553.8816ms
+2020-02-19 19:11:18.732 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.ceshi (MyAPI)'
+2020-02-19 19:11:18.738 +08:00 [INF] Request finished in 739.7094ms 200 application/json; charset=utf-8
+2020-02-19 19:11:18.885 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/favicon.ico  
+2020-02-19 19:11:18.889 +08:00 [INF] Request finished in 4.1599ms 404 
+2020-02-19 19:11:24.844 +08:00 [INF] Application is shutting down...

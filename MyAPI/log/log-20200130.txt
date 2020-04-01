@@ -1,0 +1,907 @@
+2020-01-30 11:00:12.009 +08:00 [DBG] 程序启动
+2020-01-30 11:00:12.752 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-01-30 11:00:13.240 +08:00 [INF] Now listening on: http://localhost:5000
+2020-01-30 11:00:13.250 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-01-30 11:00:13.251 +08:00 [INF] Hosting environment: Development
+2020-01-30 11:00:13.253 +08:00 [INF] Content root path: E:\SandTablePriject\.net core3.1\MyAPI\MyAPI
+2020-01-30 11:13:23.372 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:13:24.067 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:13:24.075 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:13:24.126 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-01-30 11:13:25.393 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/User_Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:13:25.397 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:13:25.399 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:13:25.412 +08:00 [INF] Route matched with {action = "Get", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-01-30 11:13:25.793 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:13:25.793 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:13:26.499 +08:00 [INF] Executed DbCommand (85ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[MeetingId], [u].[UserId], [u].[User_MeetingStats], [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [User_Meeting] AS [u]
+INNER JOIN [Meeting] AS [m] ON [u].[MeetingId] = [m].[Id]
+WHERE [u].[UserId] = @__userId_0
+2020-01-30 11:13:26.499 +08:00 [INF] Executed DbCommand (71ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-01-30 11:13:26.681 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.User_MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:13:26.681 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:13:26.734 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 2595.7261ms
+2020-01-30 11:13:26.734 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.Get (MyAPI) in 1311.842ms
+2020-01-30 11:13:26.742 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:13:26.742 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:13:26.753 +08:00 [INF] Request finished in 1360.1644ms 200 application/json; charset=utf-8
+2020-01-30 11:13:26.753 +08:00 [INF] Request finished in 3383.7813ms 200 application/json; charset=utf-8
+2020-01-30 11:13:28.991 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/User_Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:13:29.001 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:13:29.006 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:13:29.009 +08:00 [INF] Route matched with {action = "Get", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-01-30 11:13:29.057 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:13:29.071 +08:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[MeetingId], [u].[UserId], [u].[User_MeetingStats], [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [User_Meeting] AS [u]
+INNER JOIN [Meeting] AS [m] ON [u].[MeetingId] = [m].[Id]
+WHERE [u].[UserId] = @__userId_0
+2020-01-30 11:13:29.078 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.User_MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:13:29.080 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.Get (MyAPI) in 68.0541ms
+2020-01-30 11:13:29.082 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:13:29.086 +08:00 [INF] Request finished in 95.4517ms 200 application/json; charset=utf-8
+2020-01-30 11:13:29.990 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:13:29.994 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:13:29.995 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:13:29.997 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-01-30 11:13:30.006 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:13:30.012 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-01-30 11:13:30.017 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:13:30.026 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 26.0082ms
+2020-01-30 11:13:30.033 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:13:30.034 +08:00 [INF] Request finished in 44.7269ms 200 application/json; charset=utf-8
+2020-01-30 11:13:33.591 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:13:33.595 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:13:33.596 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:13:33.597 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-01-30 11:13:33.627 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:13:33.631 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-01-30 11:13:33.636 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:13:33.639 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 13.4816ms
+2020-01-30 11:13:33.640 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:13:33.642 +08:00 [INF] Request finished in 51.0678ms 200 application/json; charset=utf-8
+2020-01-30 11:13:36.068 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/User_Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:13:36.077 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:13:36.078 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:13:36.082 +08:00 [INF] Route matched with {action = "Get", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-01-30 11:13:36.092 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:13:36.103 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[MeetingId], [u].[UserId], [u].[User_MeetingStats], [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [User_Meeting] AS [u]
+INNER JOIN [Meeting] AS [m] ON [u].[MeetingId] = [m].[Id]
+WHERE [u].[UserId] = @__userId_0
+2020-01-30 11:13:36.112 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.User_MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:13:36.115 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.Get (MyAPI) in 28.5292ms
+2020-01-30 11:13:36.126 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:13:36.128 +08:00 [INF] Request finished in 60.3685ms 200 application/json; charset=utf-8
+2020-01-30 11:13:38.019 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:13:38.023 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:13:38.025 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:13:38.027 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-01-30 11:13:38.033 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:13:38.040 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-01-30 11:13:38.046 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:13:38.048 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 17.9771ms
+2020-01-30 11:13:38.049 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:13:38.052 +08:00 [INF] Request finished in 32.5825ms 200 application/json; charset=utf-8
+2020-01-30 11:14:00.631 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:14:00.637 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:14:00.638 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:14:00.640 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-01-30 11:14:00.645 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:14:00.651 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-01-30 11:14:00.655 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:14:00.657 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 14.9668ms
+2020-01-30 11:14:00.659 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:14:00.662 +08:00 [INF] Request finished in 30.165ms 200 application/json; charset=utf-8
+2020-01-30 11:15:10.880 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:15:10.903 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:15:10.905 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:15:10.906 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-01-30 11:15:10.912 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:15:10.918 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-01-30 11:15:10.923 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:15:10.925 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 16.1597ms
+2020-01-30 11:15:10.926 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:15:10.931 +08:00 [INF] Request finished in 50.4471ms 200 application/json; charset=utf-8
+2020-01-30 11:15:15.316 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:15:15.321 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:15:15.322 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:15:15.323 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-01-30 11:15:15.328 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:15:15.333 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-01-30 11:15:15.338 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:15:15.340 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 14.3462ms
+2020-01-30 11:15:15.341 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:15:15.345 +08:00 [INF] Request finished in 29.0332ms 200 application/json; charset=utf-8
+2020-01-30 11:15:17.595 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:15:17.601 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:15:17.602 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:15:17.604 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-01-30 11:15:17.611 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:15:17.622 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-01-30 11:15:17.629 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:15:17.632 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 25.0744ms
+2020-01-30 11:15:17.634 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:15:17.637 +08:00 [INF] Request finished in 42.0694ms 200 application/json; charset=utf-8
+2020-01-30 11:15:21.281 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:15:21.284 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:15:21.286 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:15:21.287 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-01-30 11:15:21.292 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:15:21.299 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-01-30 11:15:21.306 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:15:21.310 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 19.2721ms
+2020-01-30 11:15:21.312 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:15:21.314 +08:00 [INF] Request finished in 32.4207ms 200 application/json; charset=utf-8
+2020-01-30 11:15:22.590 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/User_Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:15:22.594 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:15:22.600 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:15:22.601 +08:00 [INF] Route matched with {action = "Get", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-01-30 11:15:22.607 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:15:22.613 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[MeetingId], [u].[UserId], [u].[User_MeetingStats], [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [User_Meeting] AS [u]
+INNER JOIN [Meeting] AS [m] ON [u].[MeetingId] = [m].[Id]
+WHERE [u].[UserId] = @__userId_0
+2020-01-30 11:15:22.620 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.User_MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:15:22.623 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.Get (MyAPI) in 19.4044ms
+2020-01-30 11:15:22.626 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:15:22.629 +08:00 [INF] Request finished in 38.9807ms 200 application/json; charset=utf-8
+2020-01-30 11:15:25.521 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/User_Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:15:25.525 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:15:25.527 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:15:25.529 +08:00 [INF] Route matched with {action = "Get", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-01-30 11:15:25.533 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:15:25.538 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[MeetingId], [u].[UserId], [u].[User_MeetingStats], [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [User_Meeting] AS [u]
+INNER JOIN [Meeting] AS [m] ON [u].[MeetingId] = [m].[Id]
+WHERE [u].[UserId] = @__userId_0
+2020-01-30 11:15:25.542 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.User_MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:15:25.544 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.Get (MyAPI) in 12.36ms
+2020-01-30 11:15:25.546 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:15:25.548 +08:00 [INF] Request finished in 26.9298ms 200 application/json; charset=utf-8
+2020-01-30 11:16:29.947 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:16:29.950 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:16:29.950 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:16:29.952 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-01-30 11:16:29.956 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:16:29.963 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-01-30 11:16:29.969 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:16:29.971 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 17.3245ms
+2020-01-30 11:16:29.980 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:16:29.982 +08:00 [INF] Request finished in 35.1405ms 200 application/json; charset=utf-8
+2020-01-30 11:16:32.226 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:16:32.229 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:16:32.230 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:16:32.232 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-01-30 11:16:32.236 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:16:32.242 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-01-30 11:16:32.248 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:16:32.250 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 15.889ms
+2020-01-30 11:16:32.252 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:16:32.257 +08:00 [INF] Request finished in 30.704ms 200 application/json; charset=utf-8
+2020-01-30 11:16:37.208 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/User_Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:16:37.218 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:16:37.228 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:16:37.229 +08:00 [INF] Route matched with {action = "Get", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-01-30 11:16:37.235 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:16:37.244 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[MeetingId], [u].[UserId], [u].[User_MeetingStats], [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [User_Meeting] AS [u]
+INNER JOIN [Meeting] AS [m] ON [u].[MeetingId] = [m].[Id]
+WHERE [u].[UserId] = @__userId_0
+2020-01-30 11:16:37.249 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.User_MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:16:37.252 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.Get (MyAPI) in 19.0248ms
+2020-01-30 11:16:37.279 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:16:37.280 +08:00 [INF] Request finished in 71.713ms 200 application/json; charset=utf-8
+2020-01-30 11:16:57.994 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:16:58.013 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:16:58.014 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:16:58.017 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-01-30 11:16:58.022 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:16:58.030 +08:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-01-30 11:16:58.071 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:16:58.083 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 62.9163ms
+2020-01-30 11:16:58.085 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:16:58.088 +08:00 [INF] Request finished in 94.3564ms 200 application/json; charset=utf-8
+2020-01-30 11:17:00.895 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:17:00.897 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:17:00.898 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:17:00.900 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-01-30 11:17:00.906 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:17:00.910 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-01-30 11:17:00.917 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:17:00.918 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 14.6589ms
+2020-01-30 11:17:00.926 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:17:00.928 +08:00 [INF] Request finished in 33.7808ms 200 application/json; charset=utf-8
+2020-01-30 11:17:04.499 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:17:04.507 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:17:04.509 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:17:04.510 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-01-30 11:17:04.532 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:17:04.537 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-01-30 11:17:04.542 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:17:04.545 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 14.9804ms
+2020-01-30 11:17:04.547 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:17:04.550 +08:00 [INF] Request finished in 50.7326ms 200 application/json; charset=utf-8
+2020-01-30 11:17:47.777 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:17:47.780 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:17:47.782 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:17:47.784 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-01-30 11:17:47.790 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:17:47.794 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-01-30 11:17:47.801 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:17:47.806 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 17.3951ms
+2020-01-30 11:17:47.807 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:17:47.810 +08:00 [INF] Request finished in 32.9561ms 200 application/json; charset=utf-8
+2020-01-30 11:18:10.304 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/User_Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:18:10.307 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:18:10.308 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:18:10.312 +08:00 [INF] Route matched with {action = "Get", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-01-30 11:18:10.318 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:18:10.325 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[MeetingId], [u].[UserId], [u].[User_MeetingStats], [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [User_Meeting] AS [u]
+INNER JOIN [Meeting] AS [m] ON [u].[MeetingId] = [m].[Id]
+WHERE [u].[UserId] = @__userId_0
+2020-01-30 11:18:10.341 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.User_MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:18:10.344 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.Get (MyAPI) in 27.7375ms
+2020-01-30 11:18:10.353 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:18:10.358 +08:00 [INF] Request finished in 53.7942ms 200 application/json; charset=utf-8
+2020-01-30 11:22:42.288 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:22:42.292 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:22:42.293 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:22:42.295 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-01-30 11:22:42.299 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:22:42.304 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-01-30 11:22:42.309 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:22:42.314 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 16.0946ms
+2020-01-30 11:22:42.320 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:22:42.322 +08:00 [INF] Request finished in 33.8504ms 200 application/json; charset=utf-8
+2020-01-30 11:22:45.172 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:22:45.174 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:22:45.175 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:22:45.177 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-01-30 11:22:45.182 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:22:45.187 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-01-30 11:22:45.193 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:22:45.196 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 15.7377ms
+2020-01-30 11:22:45.198 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:22:45.200 +08:00 [INF] Request finished in 28.4618ms 200 application/json; charset=utf-8
+2020-01-30 11:22:54.834 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/User_Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:22:54.837 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:22:54.838 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:22:54.840 +08:00 [INF] Route matched with {action = "Get", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-01-30 11:22:54.847 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:22:54.855 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[MeetingId], [u].[UserId], [u].[User_MeetingStats], [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [User_Meeting] AS [u]
+INNER JOIN [Meeting] AS [m] ON [u].[MeetingId] = [m].[Id]
+WHERE [u].[UserId] = @__userId_0
+2020-01-30 11:22:54.869 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.User_MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:22:54.875 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.Get (MyAPI) in 29.3052ms
+2020-01-30 11:22:54.882 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:22:54.883 +08:00 [INF] Request finished in 48.7164ms 200 application/json; charset=utf-8
+2020-01-30 11:22:56.678 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:22:56.680 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:22:56.681 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:22:56.683 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-01-30 11:22:56.686 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:22:56.700 +08:00 [INF] Executed DbCommand (9ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-01-30 11:22:56.708 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:22:56.712 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 27.0645ms
+2020-01-30 11:22:56.714 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:22:56.716 +08:00 [INF] Request finished in 37.8496ms 200 application/json; charset=utf-8
+2020-01-30 11:22:59.453 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/User_Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:22:59.457 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:22:59.460 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:22:59.462 +08:00 [INF] Route matched with {action = "Get", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-01-30 11:22:59.466 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:22:59.474 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[MeetingId], [u].[UserId], [u].[User_MeetingStats], [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [User_Meeting] AS [u]
+INNER JOIN [Meeting] AS [m] ON [u].[MeetingId] = [m].[Id]
+WHERE [u].[UserId] = @__userId_0
+2020-01-30 11:22:59.483 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.User_MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:22:59.485 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.Get (MyAPI) in 19.8537ms
+2020-01-30 11:22:59.494 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:22:59.496 +08:00 [INF] Request finished in 43.1388ms 200 application/json; charset=utf-8
+2020-01-30 11:23:01.656 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/User_Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:23:01.658 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:23:01.660 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:23:01.662 +08:00 [INF] Route matched with {action = "Get", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-01-30 11:23:01.666 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:23:01.670 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[MeetingId], [u].[UserId], [u].[User_MeetingStats], [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [User_Meeting] AS [u]
+INNER JOIN [Meeting] AS [m] ON [u].[MeetingId] = [m].[Id]
+WHERE [u].[UserId] = @__userId_0
+2020-01-30 11:23:01.676 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.User_MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:23:01.679 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.Get (MyAPI) in 14.33ms
+2020-01-30 11:23:01.681 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:23:01.684 +08:00 [INF] Request finished in 27.9032ms 200 application/json; charset=utf-8
+2020-01-30 11:23:40.528 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:23:40.531 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:23:40.532 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:23:40.533 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-01-30 11:23:40.537 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:23:40.543 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-01-30 11:23:40.549 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:23:40.552 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 16.7901ms
+2020-01-30 11:23:40.563 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:23:40.564 +08:00 [INF] Request finished in 36.1392ms 200 application/json; charset=utf-8
+2020-01-30 11:23:42.746 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/User_Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:23:42.749 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:23:42.751 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:23:42.757 +08:00 [INF] Route matched with {action = "Get", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-01-30 11:23:42.767 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:23:42.771 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[MeetingId], [u].[UserId], [u].[User_MeetingStats], [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [User_Meeting] AS [u]
+INNER JOIN [Meeting] AS [m] ON [u].[MeetingId] = [m].[Id]
+WHERE [u].[UserId] = @__userId_0
+2020-01-30 11:23:42.779 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.User_MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:23:42.781 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.Get (MyAPI) in 16.1554ms
+2020-01-30 11:23:42.783 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:23:42.785 +08:00 [INF] Request finished in 38.7351ms 200 application/json; charset=utf-8
+2020-01-30 11:23:43.455 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:23:43.483 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:23:43.484 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:23:43.485 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-01-30 11:23:43.494 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:23:43.500 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-01-30 11:23:43.505 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:23:43.510 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 18.1609ms
+2020-01-30 11:23:43.517 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:23:43.518 +08:00 [INF] Request finished in 63.3418ms 200 application/json; charset=utf-8
+2020-01-30 11:23:46.260 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:23:46.262 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:23:46.264 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:23:46.266 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-01-30 11:23:46.269 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:23:46.273 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-01-30 11:23:46.278 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:23:46.279 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 11.6511ms
+2020-01-30 11:23:46.281 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:23:46.283 +08:00 [INF] Request finished in 23.6142ms 200 application/json; charset=utf-8
+2020-01-30 11:23:49.327 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/User_Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:23:49.329 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:23:49.330 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:23:49.330 +08:00 [INF] Route matched with {action = "Get", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-01-30 11:23:49.334 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:23:49.339 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[MeetingId], [u].[UserId], [u].[User_MeetingStats], [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [User_Meeting] AS [u]
+INNER JOIN [Meeting] AS [m] ON [u].[MeetingId] = [m].[Id]
+WHERE [u].[UserId] = @__userId_0
+2020-01-30 11:23:49.345 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.User_MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:23:49.348 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.Get (MyAPI) in 15.0004ms
+2020-01-30 11:23:49.350 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:23:49.352 +08:00 [INF] Request finished in 25.7351ms 200 application/json; charset=utf-8
+2020-01-30 11:26:30.178 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:26:30.181 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:26:30.184 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:26:30.185 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-01-30 11:26:30.188 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:26:30.190 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-01-30 11:26:30.193 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:26:30.196 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 8.9141ms
+2020-01-30 11:26:30.198 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:26:30.201 +08:00 [INF] Request finished in 22.8656ms 200 application/json; charset=utf-8
+2020-01-30 11:26:32.127 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/User_Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:26:32.129 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:26:32.130 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:26:32.131 +08:00 [INF] Route matched with {action = "Get", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-01-30 11:26:32.137 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:26:32.141 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[MeetingId], [u].[UserId], [u].[User_MeetingStats], [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [User_Meeting] AS [u]
+INNER JOIN [Meeting] AS [m] ON [u].[MeetingId] = [m].[Id]
+WHERE [u].[UserId] = @__userId_0
+2020-01-30 11:26:32.146 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.User_MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:26:32.147 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.Get (MyAPI) in 10.4459ms
+2020-01-30 11:26:32.149 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:26:32.150 +08:00 [INF] Request finished in 23.3138ms 200 application/json; charset=utf-8
+2020-01-30 11:27:57.395 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:27:57.399 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:27:57.401 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:27:57.402 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-01-30 11:27:57.406 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:27:57.413 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-01-30 11:27:57.425 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:27:57.428 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 23.1162ms
+2020-01-30 11:27:57.434 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:27:57.435 +08:00 [INF] Request finished in 39.8395ms 200 application/json; charset=utf-8
+2020-01-30 11:28:00.118 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/User_Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:28:00.122 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:28:00.123 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:28:00.125 +08:00 [INF] Route matched with {action = "Get", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-01-30 11:28:00.129 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:28:00.135 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[MeetingId], [u].[UserId], [u].[User_MeetingStats], [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [User_Meeting] AS [u]
+INNER JOIN [Meeting] AS [m] ON [u].[MeetingId] = [m].[Id]
+WHERE [u].[UserId] = @__userId_0
+2020-01-30 11:28:00.147 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.User_MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:28:00.149 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.Get (MyAPI) in 20.7455ms
+2020-01-30 11:28:00.158 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:28:00.159 +08:00 [INF] Request finished in 40.8116ms 200 application/json; charset=utf-8
+2020-01-30 11:28:02.062 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/User_Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:28:02.096 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:28:02.101 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:28:02.104 +08:00 [INF] Route matched with {action = "Get", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-01-30 11:28:02.109 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:28:02.114 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[MeetingId], [u].[UserId], [u].[User_MeetingStats], [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [User_Meeting] AS [u]
+INNER JOIN [Meeting] AS [m] ON [u].[MeetingId] = [m].[Id]
+WHERE [u].[UserId] = @__userId_0
+2020-01-30 11:28:02.118 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.User_MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:28:02.122 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.Get (MyAPI) in 13.1866ms
+2020-01-30 11:28:02.126 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:28:02.128 +08:00 [INF] Request finished in 65.8348ms 200 application/json; charset=utf-8
+2020-01-30 11:28:03.201 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:28:03.205 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:28:03.207 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:28:03.210 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-01-30 11:28:03.214 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:28:03.218 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-01-30 11:28:03.232 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:28:03.236 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 22.236ms
+2020-01-30 11:28:03.249 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:28:03.251 +08:00 [INF] Request finished in 50.1699ms 200 application/json; charset=utf-8
+2020-01-30 11:32:56.127 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:32:56.129 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:32:56.130 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:32:56.132 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-01-30 11:32:56.136 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:32:56.145 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-01-30 11:32:56.149 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:32:56.151 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 15.458ms
+2020-01-30 11:32:56.152 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:32:56.154 +08:00 [INF] Request finished in 27.3273ms 200 application/json; charset=utf-8
+2020-01-30 11:32:58.664 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:32:58.666 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:32:58.668 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:32:58.671 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-01-30 11:32:58.674 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:32:58.676 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-01-30 11:32:58.679 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:32:58.680 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 6.7573ms
+2020-01-30 11:32:58.682 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:32:58.685 +08:00 [INF] Request finished in 20.9975ms 200 application/json; charset=utf-8
+2020-01-30 11:33:00.853 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:33:00.856 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:33:00.857 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:33:00.858 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-01-30 11:33:00.861 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:33:00.869 +08:00 [INF] Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-01-30 11:33:00.873 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:33:00.877 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 16.866ms
+2020-01-30 11:33:00.879 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:33:00.883 +08:00 [INF] Request finished in 30.0264ms 200 application/json; charset=utf-8
+2020-01-30 11:33:02.396 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/User_Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:33:02.400 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:33:02.401 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:33:02.402 +08:00 [INF] Route matched with {action = "Get", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-01-30 11:33:02.405 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:33:02.414 +08:00 [INF] Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[MeetingId], [u].[UserId], [u].[User_MeetingStats], [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [User_Meeting] AS [u]
+INNER JOIN [Meeting] AS [m] ON [u].[MeetingId] = [m].[Id]
+WHERE [u].[UserId] = @__userId_0
+2020-01-30 11:33:02.419 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.User_MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:33:02.422 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.Get (MyAPI) in 17.7436ms
+2020-01-30 11:33:02.425 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:33:02.428 +08:00 [INF] Request finished in 31.9019ms 200 application/json; charset=utf-8
+2020-01-30 11:33:34.903 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:33:34.905 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:33:34.906 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:33:34.907 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-01-30 11:33:34.910 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:33:34.919 +08:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-01-30 11:33:34.924 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:33:34.926 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 16.892ms
+2020-01-30 11:33:34.933 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:33:34.936 +08:00 [INF] Request finished in 33.0187ms 200 application/json; charset=utf-8
+2020-01-30 11:33:37.252 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/User_Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:33:37.256 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:33:37.259 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:33:37.263 +08:00 [INF] Route matched with {action = "Get", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-01-30 11:33:37.267 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:33:37.275 +08:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[MeetingId], [u].[UserId], [u].[User_MeetingStats], [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [User_Meeting] AS [u]
+INNER JOIN [Meeting] AS [m] ON [u].[MeetingId] = [m].[Id]
+WHERE [u].[UserId] = @__userId_0
+2020-01-30 11:33:37.285 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.User_MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:33:37.288 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.Get (MyAPI) in 20.9038ms
+2020-01-30 11:33:37.293 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:33:37.295 +08:00 [INF] Request finished in 43.7871ms 200 application/json; charset=utf-8
+2020-01-30 11:33:40.369 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:33:40.372 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:33:40.373 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:33:40.374 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-01-30 11:33:40.378 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:33:40.383 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-01-30 11:33:40.390 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:33:40.394 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 16.6201ms
+2020-01-30 11:33:40.403 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:33:40.404 +08:00 [INF] Request finished in 35.3016ms 200 application/json; charset=utf-8
+2020-01-30 11:33:41.108 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/User_Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:33:41.113 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:33:41.114 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:33:41.116 +08:00 [INF] Route matched with {action = "Get", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-01-30 11:33:41.119 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:33:41.123 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[MeetingId], [u].[UserId], [u].[User_MeetingStats], [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [User_Meeting] AS [u]
+INNER JOIN [Meeting] AS [m] ON [u].[MeetingId] = [m].[Id]
+WHERE [u].[UserId] = @__userId_0
+2020-01-30 11:33:41.129 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.User_MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:33:41.135 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.Get (MyAPI) in 16.0654ms
+2020-01-30 11:33:41.137 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:33:41.140 +08:00 [INF] Request finished in 31.0049ms 200 application/json; charset=utf-8
+2020-01-30 11:33:46.604 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:33:46.606 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:33:46.607 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:33:46.608 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-01-30 11:33:46.612 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:33:46.616 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-01-30 11:33:46.621 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:33:46.624 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 13.3995ms
+2020-01-30 11:33:46.625 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:33:46.632 +08:00 [INF] Request finished in 28.0794ms 200 application/json; charset=utf-8
+2020-01-30 11:37:19.671 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:37:19.674 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:37:19.675 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:37:19.676 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-01-30 11:37:19.681 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:37:19.687 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-01-30 11:37:19.692 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:37:19.694 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 14.0748ms
+2020-01-30 11:37:19.701 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:37:19.704 +08:00 [INF] Request finished in 32.4896ms 200 application/json; charset=utf-8
+2020-01-30 11:37:20.501 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/User_Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:37:20.503 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:37:20.504 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:37:20.505 +08:00 [INF] Route matched with {action = "Get", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-01-30 11:37:20.509 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:37:20.518 +08:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[MeetingId], [u].[UserId], [u].[User_MeetingStats], [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [User_Meeting] AS [u]
+INNER JOIN [Meeting] AS [m] ON [u].[MeetingId] = [m].[Id]
+WHERE [u].[UserId] = @__userId_0
+2020-01-30 11:37:20.522 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.User_MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:37:20.525 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.Get (MyAPI) in 16.0023ms
+2020-01-30 11:37:20.526 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:37:20.533 +08:00 [INF] Request finished in 32.1103ms 200 application/json; charset=utf-8
+2020-01-30 11:37:27.771 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:37:27.774 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:37:27.775 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:37:27.778 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-01-30 11:37:27.784 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:37:27.789 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-01-30 11:37:27.795 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:37:27.800 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 16.5188ms
+2020-01-30 11:37:27.810 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:37:27.816 +08:00 [INF] Request finished in 44.9ms 200 application/json; charset=utf-8
+2020-01-30 11:37:29.374 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting/7  
+2020-01-30 11:37:29.376 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:37:29.377 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:37:29.389 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-01-30 11:37:29.412 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:37:29.431 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[@__meetingId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[Id] = @__meetingId_0
+2020-01-30 11:37:29.445 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__userId_0
+2020-01-30 11:37:29.487 +08:00 [INF] Executing ObjectResult, writing value of type 'Infrastructure.Dto.MeetingOutputDto'.
+2020-01-30 11:37:29.490 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 97.5686ms
+2020-01-30 11:37:29.492 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:37:29.494 +08:00 [INF] Request finished in 119.9225ms 200 application/json; charset=utf-8
+2020-01-30 11:37:35.969 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting/analysisInviteCode?inviteCode=Q6gtThSsrfn9ANqtjTylKtS73%252FjYIsLIdi7c8vC%252BDgc%253D  
+2020-01-30 11:37:35.971 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:37:35.972 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.AnalysisInviteCode (MyAPI)'
+2020-01-30 11:37:35.981 +08:00 [INF] Route matched with {action = "AnalysisInviteCode", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AnalysisInviteCode(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-01-30 11:37:36.008 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:37:36.016 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[@__meetingId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[Id] = @__meetingId_0
+2020-01-30 11:37:36.021 +08:00 [INF] Executing ObjectResult, writing value of type 'Infrastructure.Dto.MeetingOutputDto'.
+2020-01-30 11:37:36.022 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.AnalysisInviteCode (MyAPI) in 37.4247ms
+2020-01-30 11:37:36.023 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.AnalysisInviteCode (MyAPI)'
+2020-01-30 11:37:36.027 +08:00 [INF] Request finished in 57.7786ms 200 application/json; charset=utf-8
+2020-01-30 11:37:42.268 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting/analysisInviteCode?inviteCode=Q6gtThSsrfn9ANqtjTylKtS73%252FjYIsLIdi7c8vC%252BDgc%253D  
+2020-01-30 11:37:42.270 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:37:42.271 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.AnalysisInviteCode (MyAPI)'
+2020-01-30 11:37:42.272 +08:00 [INF] Route matched with {action = "AnalysisInviteCode", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AnalysisInviteCode(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-01-30 11:37:42.276 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:37:42.280 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__meetingId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[Id] = @__meetingId_0
+2020-01-30 11:37:42.284 +08:00 [INF] Executing ObjectResult, writing value of type 'Infrastructure.Dto.MeetingOutputDto'.
+2020-01-30 11:37:42.285 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.AnalysisInviteCode (MyAPI) in 9.8263ms
+2020-01-30 11:37:42.287 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.AnalysisInviteCode (MyAPI)'
+2020-01-30 11:37:42.289 +08:00 [INF] Request finished in 21.0226ms 200 application/json; charset=utf-8
+2020-01-30 11:37:45.151 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:37:45.153 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:37:45.153 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:37:45.154 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-01-30 11:37:45.157 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:37:45.164 +08:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-01-30 11:37:45.168 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:37:45.170 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 12.8683ms
+2020-01-30 11:37:45.171 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:37:45.174 +08:00 [INF] Request finished in 23.0604ms 200 application/json; charset=utf-8
+2020-01-30 11:37:46.273 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/User_Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:37:46.275 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:37:46.279 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:37:46.280 +08:00 [INF] Route matched with {action = "Get", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-01-30 11:37:46.282 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:37:46.291 +08:00 [INF] Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[MeetingId], [u].[UserId], [u].[User_MeetingStats], [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [User_Meeting] AS [u]
+INNER JOIN [Meeting] AS [m] ON [u].[MeetingId] = [m].[Id]
+WHERE [u].[UserId] = @__userId_0
+2020-01-30 11:37:46.299 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.User_MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:37:46.301 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.Get (MyAPI) in 19.0412ms
+2020-01-30 11:37:46.303 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:37:46.305 +08:00 [INF] Request finished in 31.9145ms 200 application/json; charset=utf-8
+2020-01-30 11:39:04.243 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/User_Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:39:04.245 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:39:04.245 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:39:04.247 +08:00 [INF] Route matched with {action = "Get", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-01-30 11:39:04.250 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:39:04.255 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[MeetingId], [u].[UserId], [u].[User_MeetingStats], [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [User_Meeting] AS [u]
+INNER JOIN [Meeting] AS [m] ON [u].[MeetingId] = [m].[Id]
+WHERE [u].[UserId] = @__userId_0
+2020-01-30 11:39:04.259 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.User_MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:39:04.262 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.Get (MyAPI) in 12.8707ms
+2020-01-30 11:39:04.265 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:39:04.267 +08:00 [INF] Request finished in 24.4472ms 200 application/json; charset=utf-8
+2020-01-30 11:54:27.465 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:54:27.469 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:54:27.471 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:54:27.472 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-01-30 11:54:27.475 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:54:27.493 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-01-30 11:54:27.497 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:54:27.499 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 24.202ms
+2020-01-30 11:54:27.503 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:54:27.508 +08:00 [INF] Request finished in 42.1909ms 200 application/json; charset=utf-8
+2020-01-30 11:54:29.698 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/User_Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:54:29.701 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:54:29.702 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:54:29.703 +08:00 [INF] Route matched with {action = "Get", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-01-30 11:54:29.706 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:54:29.714 +08:00 [INF] Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[MeetingId], [u].[UserId], [u].[User_MeetingStats], [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [User_Meeting] AS [u]
+INNER JOIN [Meeting] AS [m] ON [u].[MeetingId] = [m].[Id]
+WHERE [u].[UserId] = @__userId_0
+2020-01-30 11:54:29.724 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.User_MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:54:29.726 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.Get (MyAPI) in 20.786ms
+2020-01-30 11:54:29.729 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:54:29.732 +08:00 [INF] Request finished in 34.4998ms 200 application/json; charset=utf-8
+2020-01-30 11:55:26.296 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:55:26.302 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:55:26.304 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:55:26.305 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-01-30 11:55:26.310 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:55:26.319 +08:00 [INF] Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-01-30 11:55:26.335 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:55:26.337 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 27.5384ms
+2020-01-30 11:55:26.343 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:55:26.355 +08:00 [INF] Request finished in 58.7179ms 200 application/json; charset=utf-8
+2020-01-30 11:55:27.511 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/User_Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:55:27.520 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:55:27.522 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:55:27.523 +08:00 [INF] Route matched with {action = "Get", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-01-30 11:55:27.526 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:55:27.537 +08:00 [INF] Executed DbCommand (9ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[MeetingId], [u].[UserId], [u].[User_MeetingStats], [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [User_Meeting] AS [u]
+INNER JOIN [Meeting] AS [m] ON [u].[MeetingId] = [m].[Id]
+WHERE [u].[UserId] = @__userId_0
+2020-01-30 11:55:27.550 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.User_MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:55:27.552 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.Get (MyAPI) in 26.5055ms
+2020-01-30 11:55:27.566 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:55:27.568 +08:00 [INF] Request finished in 56.7476ms 200 application/json; charset=utf-8
+2020-01-30 11:56:57.830 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:56:57.833 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:56:57.834 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:56:57.835 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-01-30 11:56:57.838 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:56:57.846 +08:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-01-30 11:56:57.850 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:56:57.851 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 13.1853ms
+2020-01-30 11:56:57.853 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:56:57.858 +08:00 [INF] Request finished in 28.118ms 200 application/json; charset=utf-8
+2020-01-30 11:56:58.331 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/User_Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:56:58.334 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:56:58.335 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:56:58.336 +08:00 [INF] Route matched with {action = "Get", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-01-30 11:56:58.338 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:56:58.347 +08:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[MeetingId], [u].[UserId], [u].[User_MeetingStats], [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [User_Meeting] AS [u]
+INNER JOIN [Meeting] AS [m] ON [u].[MeetingId] = [m].[Id]
+WHERE [u].[UserId] = @__userId_0
+2020-01-30 11:56:58.354 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.User_MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:56:58.355 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.Get (MyAPI) in 16.7894ms
+2020-01-30 11:56:58.363 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:56:58.365 +08:00 [INF] Request finished in 34.1899ms 200 application/json; charset=utf-8
+2020-01-30 11:57:00.637 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:57:00.639 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:57:00.641 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:57:00.644 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-01-30 11:57:00.647 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:57:00.650 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-01-30 11:57:00.656 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:57:00.660 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 13.9753ms
+2020-01-30 11:57:00.664 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:57:00.667 +08:00 [INF] Request finished in 29.9843ms 200 application/json; charset=utf-8
+2020-01-30 11:57:08.135 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:57:08.138 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:57:08.141 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:57:08.144 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-01-30 11:57:08.148 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:57:08.151 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-01-30 11:57:08.160 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:57:08.162 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 15.0435ms
+2020-01-30 11:57:08.169 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:57:08.172 +08:00 [INF] Request finished in 36.0984ms 200 application/json; charset=utf-8
+2020-01-30 11:57:19.673 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/User_Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:57:19.675 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:57:19.677 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:57:19.678 +08:00 [INF] Route matched with {action = "Get", controller = "User_Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.User_MeetingController (MyAPI).
+2020-01-30 11:57:19.682 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:57:19.691 +08:00 [INF] Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[MeetingId], [u].[UserId], [u].[User_MeetingStats], [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [User_Meeting] AS [u]
+INNER JOIN [Meeting] AS [m] ON [u].[MeetingId] = [m].[Id]
+WHERE [u].[UserId] = @__userId_0
+2020-01-30 11:57:19.696 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.User_MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:57:19.698 +08:00 [INF] Executed action MyAPI.Controllers.User_MeetingController.Get (MyAPI) in 16.5876ms
+2020-01-30 11:57:19.700 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.User_MeetingController.Get (MyAPI)'
+2020-01-30 11:57:19.703 +08:00 [INF] Request finished in 30.3979ms 200 application/json; charset=utf-8
+2020-01-30 11:57:21.181 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Meeting?userId=2869c3e7-ef9f-4dd8-af3d-2fad8ecb8483  
+2020-01-30 11:57:21.183 +08:00 [INF] Successfully validated the token.
+2020-01-30 11:57:21.184 +08:00 [INF] Executing endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:57:21.185 +08:00 [INF] Route matched with {action = "Get", controller = "Meeting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String) on controller MyAPI.Controllers.MeetingController (MyAPI).
+2020-01-30 11:57:21.190 +08:00 [INF] Entity Framework Core 3.1.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-30 11:57:21.194 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[Content], [m].[DateTime], [m].[InviteCode], [m].[MeetingName], [m].[MeetingStats], [m].[UserId]
+FROM [Meeting] AS [m]
+WHERE [m].[UserId] = @__userId_0
+2020-01-30 11:57:21.198 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Infrastructure.Dto.MeetingOutputDto, Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-01-30 11:57:21.201 +08:00 [INF] Executed action MyAPI.Controllers.MeetingController.Get (MyAPI) in 12.1132ms
+2020-01-30 11:57:21.203 +08:00 [INF] Executed endpoint 'MyAPI.Controllers.MeetingController.Get (MyAPI)'
+2020-01-30 11:57:21.209 +08:00 [INF] Request finished in 28.6273ms 200 application/json; charset=utf-8
+2020-01-30 12:47:11.265 +08:00 [INF] Application is shutting down...
