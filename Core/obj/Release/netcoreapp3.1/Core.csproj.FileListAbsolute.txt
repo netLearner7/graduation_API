@@ -1,8 +1,0 @@
-E:\SandTablePriject\.net core3.1\MyAPI\Core\bin\Release\netcoreapp3.1\Core.deps.json
-E:\SandTablePriject\.net core3.1\MyAPI\Core\bin\Release\netcoreapp3.1\Core.dll
-E:\SandTablePriject\.net core3.1\MyAPI\Core\bin\Release\netcoreapp3.1\Core.pdb
-E:\SandTablePriject\.net core3.1\MyAPI\Core\obj\Release\netcoreapp3.1\Core.csprojAssemblyReference.cache
-E:\SandTablePriject\.net core3.1\MyAPI\Core\obj\Release\netcoreapp3.1\Core.AssemblyInfoInputs.cache
-E:\SandTablePriject\.net core3.1\MyAPI\Core\obj\Release\netcoreapp3.1\Core.AssemblyInfo.cs
-E:\SandTablePriject\.net core3.1\MyAPI\Core\obj\Release\netcoreapp3.1\Core.dll
-E:\SandTablePriject\.net core3.1\MyAPI\Core\obj\Release\netcoreapp3.1\Core.pdb
