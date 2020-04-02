@@ -122,13 +122,15 @@ namespace MyAPI
                 app.UseDeveloperExceptionPage();
             }
 
-            if (env.IsProduction())
-            {
-                app.UseForwardedHeaders(new ForwardedHeadersOptions
-                {
-                    ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
-                });
-            }
+            //代理头 本地测试不用
+
+            //if (env.IsProduction())
+            //{
+            //    app.UseForwardedHeaders(new ForwardedHeadersOptions
+            //    {
+            //        ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+            //    });
+            //}
 
             app.UseSwagger();
 
