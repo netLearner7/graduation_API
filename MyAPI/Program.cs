@@ -35,6 +35,7 @@ namespace MyAPI
                 {
                     webBuilder.UseStartup<Startup>();
                     webBuilder.UseSerilog();
+                    //本地的话可以把这个注释掉
                     webBuilder.UseUrls("http://*:5000");
                 });
     }
