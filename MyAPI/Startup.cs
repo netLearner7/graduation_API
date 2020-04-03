@@ -37,7 +37,7 @@ namespace MyAPI
             services.AddAuthentication(IdentityServerAuthenticationDefaults.AuthenticationScheme).
                 AddJwtBearer(IdentityServerAuthenticationDefaults.AuthenticationScheme,o=> {
                     o.Audience = "api1";
-                    o.Authority = "http://192.168.43.131:5001";
+                    o.Authority = "http://39.99.217.82:5001";
                     o.RequireHttpsMetadata = false;
                 });
 
@@ -51,7 +51,7 @@ namespace MyAPI
             services.AddCors(o =>
             {
                 o.AddPolicy("all", option => {
-                    option.WithOrigins("http://localhost:4200/","https://netlearner7.github.io/firstA/");
+                    option.WithOrigins("http://localhost:4200/", "http://39.99.217.82:4200");
                     option.AllowAnyHeader();
                     option.AllowAnyMethod();
                     option.AllowCredentials();
