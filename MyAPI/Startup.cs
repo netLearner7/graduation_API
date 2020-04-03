@@ -51,7 +51,7 @@ namespace MyAPI
             services.AddCors(o =>
             {
                 o.AddPolicy("all", option => {
-                    option.WithOrigins("http://192.168.43.131:4200/", "http://10.84.34.19");
+                    option.WithOrigins("http://localhost:4200/","https://netlearner7.github.io/firstA/");
                     option.AllowAnyHeader();
                     option.AllowAnyMethod();
                     option.AllowCredentials();
